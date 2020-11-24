@@ -1,0 +1,118 @@
+Opdrachten
+
+Onderdeel 1
+
+Intro
+1. Wat is het verschil tussen het internet en het world wide web?
+The world wide web in het kort zijn pagina's die je online kan bekijken. (software)
+Internet is een wereldwijd systeem dat computernetwerken aan elkaar zijn verbind. (hardware)
+
+2. Wat is het verschil tussen HTML, CSS en JavaScript?
+-   HTML (hyper Text markup language) is de standaard 'opmaaktaal' voor websites. HTML is niet meer dan een opmaaktaal voor tekst in een tekstdocument.
+-   CSS (Cascading Style Sheets) bepaalt hoe de HTML van een webpagina wordt weergegeven.
+    CSS omvat dus de opmaak en indeling van je website. CSS maakt gebruik van selectors en declaraties om terugkerende elementen vorm te geven.
+-   Javascript is een programmeertaal voor het digitale web. Dankzij Javascript kunnen we HTML en CSS dynamisch maken. Met Javascript kunnen we berekeningen maken,
+    data valideren en een website interactief maken. HTML, CSS en Javascript vormen samen de front-end van een website.
+
+3. Wat is een HTML tag en een HTML element? Hoe open je een HTML tag en hoe sluit
+    je een HTML tag. Maak hiervoor voorbeelden en leg uit.
+    HTML bestaat uit een serie elementen die je kunt gebruiken om verschillende onderdelen van je inhoud te verpakken of te omhullen zodat die er op een bepaalde manier gaat uitzien of zich gedragen.
+    De tags (een ander woord voor labels of markeerders) die de tekst insluiten kunnen van een woord of een afbeelding een hyperlink naar ergens anders maken,
+    ze kunnen woorden cursiveren, lettertypes vergroten of verkleinen enzovoort.
+     
+------------------------------------------------ 
+     Bijvoorbeeld: <p>Dit is een paragraaf</p>
+------------------------------------------------
+    Opening tag: <p>
+    Dit is een paragraaf: de inhoud
+    Closing tag: </p>
+------------------------------------------------
+Element = opening tag + inhoud + closing tag
+------------------------------------------------
+
+4. HTML gebruikt basis tags om structuur op te bouwen. De <html>, <head> en <body>.
+   Geef voor elke element aan waarvoor het dient.
+-   <html></html>
+    Het <html>-element sluit alle inhoud op de volledige pagina in en wordt ook het root-element genoemd.
+    (root is het Engelse woord voor wortel).
+-   <head></head> — Het <head>-element gedraagt zich als een container voor alle zaken die je in de HTML-pagina wilt steken,
+    maar die niet tot de inhoud behoren die u aan de gebruikers wilt tonen als die uw pagina lezen.
+    Dit houdt zaken in zoals sleutelwoorden, een beschrijving van uw pagina zoals u die in zoekresultaten wilt zien verschijnen,
+    CSS om uw inhoud van stijlen te voorzien, tekensetverklaringen en meer.
+-   <body></body> — Het<body>-element bevat de volledige inhoud die je aan webgebruikers wilt tonen als die je pagina bezoeken,
+    of het nu tekst is, afbeeldingen, videos, spelletjes, afspeelbare audiosporen (i.e. audio tracks) of wat dan ook.
+
+5. Op HTML elementen kun je attributen gebruiken. Wat zijn HTML attributen?
+    Attributen geeft extra informatie over het element en ze hebben altijd een "start tag".
+   
+   Geef minimaal 5 attributen en maak voorbeelden waar je de attributen in toepast.
+-  <a href="https://google.com">Ga naar Google</a> // (a = tag naar een hyperlink) // (href) geeft attribuut aan naar welk specifiek pagina hij moet linken.
+-  <img src="img_turtle.jpg"> // (img = tag dat een plaatje in de html pagina komt) // (src atrribuut specifiek een pad naar het plaatje dat op pagina gezet moet worden.)
+-  <img src="img_turtle.jpg" width="500" height="600"> // width + height zijn de attributen die aangeeft hoe groot het plaatje komt op pagina.
+-  <p style="color:red">This is a red paragraph.</p> // (p = tag) // (style is een atrribuut om het element te stylen, zoals kleur, font, grote en etc.)
+-  <html lang="en"> // (html = tag) // (lang is atrribuut naar taal) // ("en" taalsoort in dit geval engels)
+
+6. Waarom is een goede HTML Structuur belangrijk? Is deze code een goede structuur?
+Leg uit.
+Een goede HTML Structuur is belangrijk omdat je dan kan onderscheiden wat de titel/inhoud/footer is zodat je als het nodig is in de toekomst kan veranderen.
+Deze code heeft geen goed structuur want je kan geen onderscheidt maken wat titel is, inhoud en hoeveel paragraaf aanwezig zijn.
+Als je deze zou openen in html dan komt alles op 1 lijn.
+
+7. Wat is het verschil tussen inline en block elementen?
+    Een block element start altijd op een nieuw regel en neemt de gehele breedte in.
+    Een inline element start niet op ee nieuw regel en neemt alleen de nodige breedte in.
+
+8. Wat betekent nesting? Codeer een voorbeeld met nesting erin.
+    Je moet denken dat HTML tags een doos is en in de doos zitten nog meer dozen deze zijn dan de nesting.
+    De nesting is uiteindelijk heel belangrijk wanneer je aan de slag gaat met CSS.
+<p>bijvoorbeeld: Dit is een <strong>zin</strong> van een text</p>
+
+9. Sinds de komst van HTML5 zijn er elementen die betekenissen hebben. Wat
+wordt er bedoeld met HTML semantics? Waarom is het gebruik van
+semantics belangrijk?
+HTML sematics legt enkel de nadruk op de overeenomst tussen de naam van het element en de inhoud ervan.
+Aan de inhoud van de element wordt een betekenisvolle naam gegeven.
+Het gebruik van semantics is belangrijk want;
+- snellere laadtijd: omdat de code eenvoudiger is doordat enkel html elementen worden gebruikt en dus minder attributen om de inhoud in te delen is er minder dataverkeer;
+- betere toegankelijkheid: screenreaders en andere alternatieve browsers kunnen beter overweg met semantisch opgemaakte html-documenten omdat ze de 'betekenis' van de inhoud uit de tags kunnen afleiden;
+- mobiel: responsive design is stukken gemakkelijker met semantische elementen;
+- de vormgeving in CSS is nauwkeuriger en flexibeler;
+- HTML-code is eenvoudiger en overzichtelijk
+
+10.Wat voor content zou je in de volgende elementen gebruiken?
+Geef in je antwoord voor elk element een toelichting.
+● <header> hoofding, waar je belangrijkste en bekendste informatie vindt.
+● <footer> voettekst, een band die langs de onderkant van de pagina loopt en die in het algemeen de kleine letters bevat, auteursrechtsvermeldingen of contactinformatie.
+● <main> Dit is een groot gebied in het midden van de pagina die de meeste unieke inhoud van de webpagina bevat.
+● <nav> navigatiebalk.
+● <section>Lijkt op article maar het wodt gebruikt om een deel van de pagina te groeperen. Dit deel heeft een enkel functioneel doel bijv. mini map.
+● <aside> zijbalk, wordt vaak binnen het mainelemenet geplaatst.
+● <article> omhult een blok van gerelateerde inhoud die op zichzelf zinvol blijft zonder de aanwezigheid van de rest van de pagina.
+
+11. Onderzoek en leg uit waarom headers zowel belangrijk zijn voor zoekmachines als
+voor de gebruikers.
+Zoekmachines gebruiken headers om de zoekopdrachten voor mensen te zoeken. En mensen gebruiken vaak 1 woord om hun webpagina te vinden.
+
+12. Onderzoek hoe je een text-header aanmaakt en reproduceer het volgende resultaat:
+<h1>Headings opdrachten</h1>
+    <h2>Heading 1</h2>
+    <h3>Heading 2</h3>
+    <h4>heading 3</h4>
+    <h5>heading 4</h5>
+    <h6>heading 5</h6>
+    <p>heading 6</p>
+
+13.Onderzoek wat een paragraaf tag is en hoe hij gebruikt wordt.
+Geef hier een voorbeeld bij. 
+<p> tag een paragraaf. De pagina geeft automatisch een lege lijn ervoor en na de <p> element
+   <p>heading 6</p>
+
+18.. Onderzoek welke 4 attributen een link tag kan hebben, leg uit wat deze doen
+en voeg deze als voorbeeld toe op je website.
+
+The target attribute can have one of the following values:
+
+_self - Default. Opens the document in the same window/tab as it was clicked
+_blank - Opens the document in a new window or tab
+_parent - Opens the document in the parent frame
+_top - Opens the document in the full body of the window

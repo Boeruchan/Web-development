@@ -1,0 +1,26 @@
+Opdrachten onderdeel 2
+
+1. Bij het inladen van een bestand is het noodzakelijk om de locatie van het
+bestand aan te geven. Dit kan op 2 manieren:
+● Absolute path
+● Relative path
+Wat houden deze 2 paths in?
+● Absolute path - full url to a file
+● Relative path - point to a file relative to the currentpage like in a folder.
+
+2. Zoek uit welke formaat afbeeldingen er nog meer kan zijn. 
+png, jpeg, gif, tiff, pdf
+
+3. Zoek uit welke browsers er zijn en maak een lijst van je antwoord.
+chrome, edge, safari, firefox
+
+5. Wat houdt de alt attribute in? En waarom is het handig om de alt attribuut te
+gebruiken?
+Wanneer een foto niet geladen wordt voor 1 of ander vaag reden dan kan de alt attribute een beschrijving geven wat voor foto het was.
+
+7. Speel een audio bestand af met <source> tag. Leg uit wat hier het voordeel
+van is.
+De element source laat de browser de juiste audio kiezen om het af te laten spelen.
+
+8.Speel een video bestand af met <source> tag. Leg uit wat hier het voordeel van is.
+De element source laat de browser de juiste player kiezen om het af te laten spelen.
