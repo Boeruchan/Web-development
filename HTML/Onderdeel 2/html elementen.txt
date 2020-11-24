@@ -12,15 +12,16 @@ Wat houden deze 2 paths in?
 png, jpeg, gif, tiff, pdf
 
 3. Zoek uit welke browsers er zijn en maak een lijst van je antwoord.
-chrome, edge, safari, firefox
+chrome, edge, safari, firefox, internet explorers, opera, samsung browser, usee browser.
 
 5. Wat houdt de alt attribute in? En waarom is het handig om de alt attribuut te
 gebruiken?
 Wanneer een foto niet geladen wordt voor 1 of ander vaag reden dan kan de alt attribute een beschrijving geven wat voor foto het was.
+En heeft ook invloed op het zoekopdracht bij een browser.
 
 7. Speel een audio bestand af met <source> tag. Leg uit wat hier het voordeel
 van is.
-De element source laat de browser de juiste audio kiezen om het af te laten spelen.
+Met de tag <source> kunt u alternatieve video- / audio- / afbeeldingsbestanden specificeren waaruit de browser kan kiezen, op basis van browserondersteuning of viewport-breedte.
 
 8.Speel een video bestand af met <source> tag. Leg uit wat hier het voordeel van is.
-De element source laat de browser de juiste player kiezen om het af te laten spelen.
+Met de tag <source> kunt u alternatieve video- / audio- / afbeeldingsbestanden specificeren waaruit de browser kan kiezen, op basis van browserondersteuning of viewport-breedte.

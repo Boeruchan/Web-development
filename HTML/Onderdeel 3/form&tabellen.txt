@@ -1,0 +1,4 @@
+6. dropdown, kleur van een artikel
+    radio button, gender
+    checkboxes, mailinglist ja of nee
+
