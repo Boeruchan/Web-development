@@ -2,3 +2,11 @@
     radio button, gender
     checkboxes, mailinglist ja of nee
 
+10.Om een tabel te maken heb je volgende elementen nodig:
+● <table> tag dat aangeeft dat het een HTML tabel 
+● <thead> groep in de bovenste rij
+● <tbody> groep in de rest van tabel
+● <tfoot> de onderste groep van het tabel
+● <th> tekst dikgedrukt en gecentreerd
+● <tr> tabel rij
+● <td> data (informatie)

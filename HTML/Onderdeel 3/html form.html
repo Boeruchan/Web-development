@@ -82,13 +82,11 @@
                     <option value="badminton">badminton</option>
                     <option value="squash">squash</option>
                 </select>
-                <input type="submit">
 
                 <br><br>
 
                 <label for="datetime">Datum en tijd:</label>
                 <input type="datetime-local" id="datetime" name="datetime">
-                <input type="submit" value="Submit">
 
                 <br><br>
 
@@ -137,6 +135,9 @@
                 <input type="text" id="achternaam" name="achternaam"><br><br>
                 <label for="Voornaam">Voornaam:</label>
                 <input type="text" id="Voornaam" name="Voornaam"><br><br>
+                <label for="Email">Email:</label>
+                <input type="Email" id="Email" name="Email"><br><br>
+
 
                 Bent u aanwezig op onze bruiloft?
                 <input type="radio" id="ja" value="true">
@@ -144,33 +145,29 @@
                 <input type="radio" id="nee" value="false">
                 <label for="nee">Nee</label><br><br>
 
+                <label for="aantal">Aantal (max 5):</label>
+                <input type="number" id="aantal" name="aantal" min="1" max="5">
+                <br><br>
 
-                <label for="Email">Email:</label>
-                <input type="Email" id="Email" name="Email"><br><br>
-
-                <label for="sport">Type sport om te reserveren:</label>
-                <select id="sport" name="sport">
-                    <option value="tafeltennis">tafeltennis</option>
-                    <option value="badminton">badminton</option>
-                    <option value="squash">squash</option>
+   
+                <label for="menu">menu keuze:</label>
+                <select id="menu" name="menu">
+                    <option value="vegan">vegan</option>
+                    <option value="vegetarisch">vegetarisch</option>
+                    <option value="vis">vis</option>
+                    <option value="varkensrollade">varkensrollade</option>
+                    <option value="biefstuk">biefstuk</option>
                 </select>
-                <input type="submit">
 
                 <br><br>
 
-                <label for="datetime">Datum en tijd:</label>
-                <input type="datetime-local" id="datetime" name="datetime">
-                <input type="submit" value="Submit">
-
-                <br><br>
-
-                <label for="Adres">Adres:</label>
-                <input type="Adres" id="Adres" name="Adres">
+                <label for="bijzonderheden">bijzonderheden:</label>
+                <input type="bijzonderheden" id="bijzonderheden" name="bijzonderheden">
 
                 <br><br>
 
                 <input type="checkbox" id="voorwaardes" name="voorwaarde" value="true">
-                <label for="true">akkoord met de reserverings voorwaardes.</label>
+                <label for="true">Breng blijheid met je mee.</label>
                 <br>
 
             </fieldset>
