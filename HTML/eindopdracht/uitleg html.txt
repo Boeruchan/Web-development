@@ -1,0 +1,43 @@
+Html Form
+
+<Form> --> Laat html weten dat er een formulier wordt ingezet.
+
+<input type=""> --> invoeringsmethode van een form element
+
+<label> --> 
+
+
+
+--------------------------------------
+
+Atributen
+
+Action --> waar het naar toe verzonden moet worden (back-end)
+
+Target --> Laat zien/weten op een pagina dat het verzonden is en terecht is gekomen bij de desbetrefende.
+_blank: laat zien op een nieuw pagina of tab
+_self: laat zien op de huidige pagina
+_parent:
+_top: laat zien 
+framename: 
+
+Method --> geeft door aan http wat er moet gebeuren met de data die ingevuld zijn.
+post: formulier; gegevens die de website krijgt en nooit laat zien in url.
+get: bijv;zoekbalks
+
+--------------------------------------------
+
+Form elementen
+
+<input> invoeringsmethode.
+<label>
+<label for=""> for is een attribute van label en de benaming moet hetzelfde zijn als id en input element <for>. of anders werkt de label niet.
+<select> dropdown list en selecteren van een item
+<textarea> typen in een aangegeven gedeelte
+<button> knop
+<fieldset> kader erom heen
+<legend> tekstgedeelte in de kaderlijn
+<datalist>
+<output>
+<option>
+<optgroup>
