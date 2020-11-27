@@ -9,126 +9,119 @@
 
 <body>
 
-    <div>
+    <nav>
         <a href="opdracht3.html">first page</a>
         <a href="opdracht3b.html">second page</a>
-    </div>
-
-    <h1>Members</h1>
-    <table>
-        <tr>
-            <th>Firstname</th>
-            <th>Surname</th>
-            <th>Age</th>
-        </tr>
-        <tr>
-            <td>Klaas</td>
-            <td>Jan</td>
-            <td>34</td>
-        </tr>
-        <tr>
-            <td>Jennis</td>
-            <td>Lee</td>
-            <td>25</td>
-        </tr>
-        <tr>
-            <td>Cameron</td>
-            <td>Lion</td>
-            <td>16</td>
-        </tr>
-        <tr>
-            <td>Anthony</td>
-            <td>Bos</td>
-            <td>66</td>
-        </tr>
-        <tr>
-            <td>Frits</td>
-            <td>Kosnovia</td>
-            <td>33</td>
-        </tr>
-        <tr>
-            <td>Venezuela</td>
-            <td>Kosnovia</td>
-            <td>57</td>
-        </tr>
-        <tr>
-            <td>Bosnia</td>
-            <td>Kovic</td>
-            <td>43</td>
-        </tr>
-    </table>
-
-    <br>
-
-    <table border="1px" width="900px">
-        <form action="/action_page.php">
+    </nav>
+    <header>
+        <h1>Members</h1>
+        <table>
             <tr>
-                <td colspan=""><label for="fname">First name:</label><br>
+                <th>Firstname</th>
+                <th>Surname</th>
+                <th>Age</th>
+            </tr>
+            <tr>
+                <td>Klaas</td>
+                <td>Jan</td>
+                <td>34</td>
+            </tr>
+            <tr>
+                <td>Jennis</td>
+                <td>Lee</td>
+                <td>25</td>
+            </tr>
+            <tr>
+                <td>Cameron</td>
+                <td>Lion</td>
+                <td>16</td>
+            </tr>
+            <tr>
+                <td>Anthony</td>
+                <td>Bos</td>
+                <td>66</td>
+            </tr>
+            <tr>
+                <td>Frits</td>
+                <td>Kosnovia</td>
+                <td>33</td>
+            </tr>
+            <tr>
+                <td>Venezuela</td>
+                <td>Kosnovia</td>
+                <td>57</td>
+            </tr>
+            <tr>
+                <td>Bosnia</td>
+                <td>Kovic</td>
+                <td>43</td>
+            </tr>
+        </table>
+        <br>
+        <table width="900px">
+            <form action="/action_page.php">
+                <tr>
+                    <td colspan=""><label for="fname">First name:</label><br>
+                        <input type="text" id="fname" name="fname" size=70></td>
+                    <td colspan=""><label for="sname">Surname:</label><br>
+                        <input type="text" id="sname" name="sname" size="50"></td>
+                    <td><label for="age">Age:</label><br>
+                        <input type="text" id="age" name="age" size="30"></td>
+                </tr>
+                <tr>
+                    <td><label for="cpagny">Compagny:</label><br>
+                        <input type="text" id="cpagny" name="cpagny" size="60"></td>
+                    <td colspan=""><label for="uname">Username:</label><br>
+                        <input type="text" id="uname" name="uname" size="40"></td>
+                    <td colspan=""><label for="email">Email:</label><br>
+                        <input type="text" id="email" name="email" size="50"></td>
+                </tr>
+                <tr>
+                    <td colspan="6"><label for="adress">Adress:</label><br>
+                        <input type="text" id="adress" name="adress" size="150"></td>
+                </tr>
+                <tr>
+                    <td colspan=""><label for="city">City:</label><br>
+                        <input type="text" id="city" name="city" size="50"></td>
+                    <td colspan=""><label for="Country">Country:</label><br>
+                        <input type="text" id="Country" name="Country" size="50"></td>
+                    <td><label for="postalc">Postalcode:</label><br>
+                        <input type="text" id="postalc" name="postalc" size="50"></td>
+                </tr>
+            </form>
+        </table>
+    </header>
+    <br>
+    <hr>
+    <br>
+    <footer>
+        <table border>
+            <captiop>test met col en row group</captiop>
+            <col>
+            <col>
+            <colgroup span="3"></colgroup>
+            <tr>
+                <td colspan="3" scope="colgroup"><label for="fname">First name:</label><br>
                     <input type="text" id="fname" name="fname" size=70></td>
-                <td colspan=""><label for="sname">Surname:</label><br>
+                <td colspan="3" scope="colgroup"><label for="sname">Surname:</label><br>
                     <input type="text" id="sname" name="sname" size="50"></td>
-                <td><label for="age">Age:</label><br>
+                <td colspan="3" scope="colgroup"><label for="age">Age:</label><br>
                     <input type="text" id="age" name="age" size="30"></td>
             </tr>
             <tr>
-                <td><label for="cpagny">Compagny:</label><br>
+                <td colspan="2"><label for="cpagny">Compagny:</label><br>
                     <input type="text" id="cpagny" name="cpagny" size="60"></td>
-                <td colspan=""><label for="uname">Username:</label><br>
+                <td colspan="2"><label for="uname">Username:</label><br>
                     <input type="text" id="uname" name="uname" size="40"></td>
                 <td colspan=""><label for="email">Email:</label><br>
                     <input type="text" id="email" name="email" size="50"></td>
+                <td>1</td>
+                <td>2</td>
+                <td>3</td>
+                <td>4</td>
             </tr>
-            <tr>
-                <td colspan="6"><label for="adress">Adress:</label><br>
-                    <input type="text" id="adress" name="adress" size="150"></td>
-            </tr>
-            <tr>
-                <td colspan=""><label for="city">City:</label><br>
-                    <input type="text" id="city" name="city" size="50"></td>
-                <td colspan=""><label for="Country">Country:</label><br>
-                    <input type="text" id="Country" name="Country" size="50"></td>
-                <td><label for="postalc">Postalcode:</label><br>
-                    <input type="text" id="postalc" name="postalc" size="50"></td>
-            </tr>
-        </form>
-    </table>
-
-
-    <hr>
-
-    <table border>
-        <captiop>test met col en row group</captiop>
-        <col>
-        <col>
-        <colgroup span="3"></colgroup>
-
-
-        <tr>
-            <td colspan="3" scope="colgroup"><label for="fname">First name:</label><br>
-                <input type="text" id="fname" name="fname" size=70></td>
-            <td colspan="3" scope="colgroup"><label for="sname">Surname:</label><br>
-                <input type="text" id="sname" name="sname" size="50"></td>
-            <td colspan="3" scope="colgroup"><label for="age">Age:</label><br>
-                <input type="text" id="age" name="age" size="30"></td>
-        </tr>
-        <tr>
-            <td colspan="2"><label for="cpagny">Compagny:</label><br>
-                <input type="text" id="cpagny" name="cpagny" size="60"></td>
-            <td colspan="2"><label for="uname">Username:</label><br>
-                <input type="text" id="uname" name="uname" size="40"></td>
-            <td colspan=""><label for="email">Email:</label><br>
-                <input type="text" id="email" name="email" size="50"></td>
-            <td>1</td>
-            <td>2</td>
-            <td>3</td>
-            <td>4</td>
-        </tr>
-    </table>
-
-
-
-
-
+        </table>
+    </footer>
 </body>
 
 </html>

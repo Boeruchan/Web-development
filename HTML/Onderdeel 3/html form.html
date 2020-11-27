@@ -5,129 +5,109 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>form</title>
-
 </head>
 
 <body>
+    <nav>
+        <p><a href="html table.html">Go to table form</a></p>
+    </nav>
+    <main>
 
-    <body style="background-color: lightgrey;">
-        <form action="/action_page.php">
-            <label for="achternaam">Achternaam:</label>
-            <input type="text" id="achternaam" name="achternaam"><br><br>
-            <label for="voornaam">Voornaam:</label>
-            <input type="text" id="voornaam" name="voornaam"><br>
-        </form>
-        <br>
-
-        <form action="/action_page.php">
-            <fieldset>
-                <legend>Persoons gegevens:</legend>
-                <label for="Achternaam">Achternaam:</label>
+        <body style="background-color: lightgrey;">
+            <form action="/action_page.php">
+                <label for="achternaam">Achternaam:</label>
                 <input type="text" id="achternaam" name="achternaam"><br><br>
-                <label for="Voornaam">Voornaam:</label>
-                <input type="text" id="Voornaam" name="Voornaam"><br><br>
-
-                <input type="radio" id="male" name="gender" value="male">
-                <label for="male">M</label>
-                <input type="radio" id="female" name="gender" value="female">
-                <label for="male">V</label><br><br>
-
-
-                <label for="Postcode">Postcode:</label>
-                <input type="Postcode" id="Postcode" name="Postcode"><br><br>
-                <label for="Adres">Adres:</label>
-                <input type="Adres" id="Adres" name="Adres"><br><br>
-
-            </fieldset>
-            <input type="submit" value="Submit">
-            <input type="reset" value="Reset">
-        </form>
-
-        <br><br>
-
-        <form action="/action_page.php">
-            <label for="turtle">Choose a turtle:</label>
-            <select id="turtle" name="turtle">
-                <option value="redear">red ear turtle</option>
-                <option value="yellowear">yellow ear turtle</option>
-                <option value="river">river nosepig turtle</option>
-                <option value="redbelly">redbelly turtle</option>
-            </select>
-            <input type="submit">
-        </form>
-
-        <br><br>
-
-        <form action="/action_page.php">
-            <fieldset>
-                <legend>Reserveringsformulier:</legend>
-                <label for="Achternaam">Achternaam:</label>
-                <input type="text" id="achternaam" name="achternaam"><br><br>
-                <label for="Voornaam">Voornaam:</label>
-                <input type="text" id="Voornaam" name="Voornaam"><br><br>
-
-                Lidmaatschap
-                <input type="radio" id="ja" value="true">
-                <label for="ja">Ja</label>
-                <input type="radio" id="nee" value="false">
-                <label for="nee">Nee</label><br><br>
-
-
-                <label for="Email">Email:</label>
-                <input type="Email" id="Email" name="Email"><br><br>
-
-                <label for="sport">Type sport om te reserveren:</label>
-                <select id="sport" name="sport">
-                    <option value="tafeltennis">tafeltennis</option>
-                    <option value="badminton">badminton</option>
-                    <option value="squash">squash</option>
+                <label for="voornaam">Voornaam:</label>
+                <input type="text" id="voornaam" name="voornaam"><br>
+            </form>
+            <br>
+            <form action="/action_page.php">
+                <fieldset>
+                    <legend>Persoons gegevens:</legend>
+                    <label for="Achternaam">Achternaam:</label>
+                    <input type="text" id="achternaam" name="achternaam"><br><br>
+                    <label for="Voornaam">Voornaam:</label>
+                    <input type="text" id="Voornaam" name="Voornaam"><br><br>
+                    <input type="radio" id="male" name="gender" value="male">
+                    <label for="male">M</label>
+                    <input type="radio" id="female" name="gender" value="female">
+                    <label for="male">V</label><br><br>
+                    <label for="Postcode">Postcode:</label>
+                    <input type="Postcode" id="Postcode" name="Postcode"><br><br>
+                    <label for="Adres">Adres:</label>
+                    <input type="Adres" id="Adres" name="Adres"><br><br>
+                </fieldset>
+                <input type="submit" value="Submit">
+                <input type="reset" value="Reset">
+            </form>
+            <br><br>
+            <form action="/action_page.php">
+                <label for="turtle">Choose a turtle:</label>
+                <select id="turtle" name="turtle">
+                    <option value="redear">red ear turtle</option>
+                    <option value="yellowear">yellow ear turtle</option>
+                    <option value="river">river nosepig turtle</option>
+                    <option value="redbelly">redbelly turtle</option>
                 </select>
-
-                <br><br>
-
-                <label for="datetime">Datum en tijd:</label>
-                <input type="datetime-local" id="datetime" name="datetime">
-
-                <br><br>
-
-                <label for="Adres">Adres:</label>
-                <input type="Adres" id="Adres" name="Adres">
-
-                <br><br>
-
-                <input type="checkbox" id="voorwaardes" name="voorwaarde" value="true">
-                <label for="true">akkoord met de reserverings voorwaardes.</label>
-                <br>
-
-            </fieldset>
-            <input type="submit" value="Submit">
-            <input type="reset" value="Reset">
-        </form>
-
-        <br><br>
-
-        
-        <form action="/action_page.php">
-            <fieldset>
-                <legend>Reserveringsformulier:</legend>
-                <label for="Achternaam">Achternaam:</label>
-                <input type="text" id="achternaam" name="achternaam"><br><br>
-                <label for="Voornaam">Voornaam:</label>
-                <input type="text" id="Voornaam" name="Voornaam"><br><br>
-                <label for="Email">Email:</label>
-                <input type="Email" id="Email" name="Email"><br><br>
-                <label for="boek">Boek:</label>
-                <input type="boek" id="boek" name="boek"><br><br>
-                <label for="aantal">Aantal (max 5):</label>
-                <input type="number" id="aantal" name="aantal" min="1" max="5">
-            </fieldset>
-            <input type="submit" value="Submit">
-            <input type="reset" value="Reset">
-        </form>
-
-        <br><br>
-
-        
+                <input type="submit">
+            </form>
+            <br><br>
+            <form action="/action_page.php">
+                <fieldset>
+                    <legend>Reserveringsformulier:</legend>
+                    <label for="Achternaam">Achternaam:</label>
+                    <input type="text" id="achternaam" name="achternaam"><br><br>
+                    <label for="Voornaam">Voornaam:</label>
+                    <input type="text" id="Voornaam" name="Voornaam"><br><br>
+                    Lidmaatschap
+                    <input type="radio" id="ja" value="true">
+                    <label for="ja">Ja</label>
+                    <input type="radio" id="nee" value="false">
+                    <label for="nee">Nee</label><br><br>
+                    <label for="Email">Email:</label>
+                    <input type="Email" id="Email" name="Email"><br><br>
+                    <label for="sport">Type sport om te reserveren:</label>
+                    <select id="sport" name="sport">
+                        <option value="tafeltennis">tafeltennis</option>
+                        <option value="badminton">badminton</option>
+                        <option value="squash">squash</option>
+                    </select>
+                    <br><br>
+                    <label for="datetime">Datum en tijd:</label>
+                    <input type="datetime-local" id="datetime" name="datetime">
+                    <br><br>
+                    <label for="Adres">Adres:</label>
+                    <input type="Adres" id="Adres" name="Adres">
+                    <br><br>
+                    <input type="checkbox" id="voorwaardes" name="voorwaarde" value="true">
+                    <label for="true">akkoord met de reserverings voorwaardes.</label>
+                    <br>
+                </fieldset>
+                <input type="submit" value="Submit">
+                <input type="reset" value="Reset">
+            </form>
+            <br><br>
+            <form action="/action_page.php">
+                <fieldset>
+                    <legend>Reserveringsformulier:</legend>
+                    <label for="Achternaam">Achternaam:</label>
+                    <input type="text" id="achternaam" name="achternaam"><br><br>
+                    <label for="Voornaam">Voornaam:</label>
+                    <input type="text" id="Voornaam" name="Voornaam"><br><br>
+                    <label for="Email">Email:</label>
+                    <input type="Email" id="Email" name="Email"><br><br>
+                    <label for="boek">Boek:</label>
+                    <input type="boek" id="boek" name="boek"><br><br>
+                    <label for="aantal">Aantal (max 5):</label>
+                    <input type="number" id="aantal" name="aantal" min="1" max="5">
+                </fieldset>
+                <input type="submit" value="Submit">
+                <input type="reset" value="Reset">
+            </form>
+    </main>
+    
+    <br><br>
+    <footer>
         <form action="/action_page.php">
             <fieldset>
                 <legend>wedding invitation:</legend>
@@ -137,19 +117,14 @@
                 <input type="text" id="Voornaam" name="Voornaam"><br><br>
                 <label for="Email">Email:</label>
                 <input type="Email" id="Email" name="Email"><br><br>
-
-
                 Bent u aanwezig op onze bruiloft?
                 <input type="radio" id="ja" value="true">
                 <label for="ja">Ja</label>
                 <input type="radio" id="nee" value="false">
                 <label for="nee">Nee</label><br><br>
-
                 <label for="aantal">Aantal (max 5):</label>
                 <input type="number" id="aantal" name="aantal" min="1" max="5">
                 <br><br>
-
-   
                 <label for="menu">menu keuze:</label>
                 <select id="menu" name="menu">
                     <option value="vegan">vegan</option>
@@ -158,23 +133,18 @@
                     <option value="varkensrollade">varkensrollade</option>
                     <option value="biefstuk">biefstuk</option>
                 </select>
-
                 <br><br>
-
                 <label for="bijzonderheden">bijzonderheden:</label>
                 <input type="bijzonderheden" id="bijzonderheden" name="bijzonderheden">
-
                 <br><br>
-
                 <input type="checkbox" id="voorwaardes" name="voorwaarde" value="true">
                 <label for="true">Breng blijheid met je mee.</label>
                 <br>
-
             </fieldset>
             <input type="submit" value="Submit">
             <input type="reset" value="Reset">
         </form>
-
-    </body>
+    </footer>
+</body>
 
 </html>
