@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    div+p {
+        color: red;
+    }
+</style>
+
+<body>
+    <h1>Adjacent selector</h1>
+    <p>The adjacent sibling selector selects all elements that are the adjacent siblings of a specified element.
+        Sibling elements must have the same parent element, and "adjacent" means "immediately following".</p>
+    <figure>
+        <figcaption>voorbeeld</figcaption>
+        <xmp>
+            div > p {
+            color: red;
+            }
+
+            voorbeeld:
+            <p>paragraph before not in the div</p>
+            <div>
+                <p>Paragraph 1 in the div.</p>
+                <p>Paragraph 2 in the div.</p>
+            </div>
+                <p>paragraph after not in the div</p>
+                
+        </xmp>
+    </figure>
+    <p>paragraph before not in the div</p>
+    <div>
+        <p>Paragraph 1 in the div.</p>
+        <p>Paragraph 2 in the div.</p>
+    </div>
+    <p>paragraph after not in the div</p>
+    <p>paragraph after not in the div</p>
+</body>
+
+</html>
