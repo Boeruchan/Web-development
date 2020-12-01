@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>atrribute</title>
+</head>
+<style>
+    /* Links that end in ".org" */
+a[href$=".org"] {
+  color: red;
+}
+
+/* Links that start with "https" and end in ".org" */
+a[href^="https"][href$=".org"] {
+  color: green;
+}
+</style>
+
+<body>
+<nav>
+ <a href="../opdracht7.html">Opdracht 7</a><br>
+</nav>
+    <h1>attribute selector</h1>
+    <p>The CSS attribute selector matches elements based on the presence or value of a given attribute.</p>
+    /* Links that end in ".org" */<br>
+    a[href$=".org"] {
+      color: red;
+    }<br><br>
+    /* Links that start with "https" and end in ".org" */<br>
+    a[href^="https"][href$=".org"] {
+      color: green;
+    }
+    <br><br>
+    &lt;ul&gt;<br>
+    &lt;li&gt;&lt;a href=&quot;http://example.org&quot;&gt;Example org link&lt;/a&gt;&lt;/li&gt;<br>
+    &lt;li&gt;&lt;a href=&quot;https://example.org&quot;&gt;Example https org link&lt;/a&gt;
+    &lt;/li&gt;<br>
+&lt;/ul&gt;
+    <br><hr><br>
+    <ul>
+        <li><a href="http://example.org">Example org link</a></li>
+        <li><a href="https://example.org">Example https org link</a>
+        </li>
+    </ul>
+</body>
+
+</html>

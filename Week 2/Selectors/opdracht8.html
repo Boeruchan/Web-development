@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Opdracht 8</title>
+</head>
+<style>
+    body {
+    color: green;
+}
+span {
+    color: black;
+}
+    h1 { 
+    color: red; 
+}
+h1 { 
+    color: blue; 
+}
+</style>
+<body>
+    <header>
+        <h1>Opdracht 8</h1>
+    </header>
+    <main><span>
+        <h3>Leg in eigen woorden uit wat met cascade en inheritance wordt bedoeld. Maak voorbeelden om je antwoord uit
+            te leggen.
+        </h3><br>
+        <h2>Casade</h2>
+        <p>De regels van CSS is de laatste code is van toepassing <br>
+            Bijvoorbeeld: je hebt in css 2x h1, eerste is rood, tweede is blauw.<br>
+            In de body zal bij de h1 blauw kleuren want die is de laatste dat geschreven is. <br>
+            De eerste h1 in rood is dan geannuleerd.
+            Tenzij er een class wordt aangegeven aan de h1 dan zal de class de laatste geschreven code overrulen.
+        </p>
+        <hr>
+        <p>voorbeeld</p>
+        h1 {<br> 
+            color: red;<br> 
+        }<br>
+        h1 { <br>
+            color: blue;<br> 
+        }<br>
+        h1 { 
+    color: red; 
+}
+h1 { 
+    color: blue; 
+}
+&lt;h1&gt;This is my heading.&lt;/h1&gt;&lt;br&gt;
+
+<h1>This is my heading.</h1>
+    <hr><br>
+    
+        <h2>Inheritance</h2>
+        Sommige CSS property values heeft een parent element en die zijn gekoppeld aan de child element.
+    <br><hr><br>
+    body {<br>
+        color: green;<br>
+    } <br>
+    <br>
+    span { <br>
+        color: black; <br>
+    } <br>
+        <br>
+        &lt;p&gt;As the body has been set to have a color of blue this is inherited through the descendants.&lt;/p&gt;<br>
+&lt;p&gt;We can change the color by targetting the element with a selector, such as this &lt;span&gt;span&lt;/span&gt;.&lt;/p&gt;
+    <br></span>
+    <p>As the body has been set to have a color of blue this is inherited through the descendants.</p>
+<p>We can change the color by targetting the element with a selector, such as this <span>span</span>.</p>
+    </main>
+</body>
+</html>

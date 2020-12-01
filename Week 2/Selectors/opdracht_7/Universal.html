@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Universal</title>
+</head>
+<style>
+  * [lang^=en] {
+    color: green;
+  }
+
+  *.warning {
+    color: red;
+  }
+
+  *#maincontent {
+    border: 1px solid blue;
+  }
+
+  .floating {
+    float: left
+  }
+
+  /* automatically clear the next sibling after a floating element */
+  .floating+* {
+    clear: left;
+  }
+</style>
+
+<body>
+  <nav><a href="../opdracht7.html">Opdracht 7</a><br></nav>
+  <header>
+    <h1>Universal selector</h1>
+  </header>
+  <main>
+    <p>The CSS universal selector (*) matches elements of any type.</p>
+    <br>
+    * [lang^=en] {<br>
+    color: green;
+    }
+    <br><br>
+    *.warning {<br>
+    color: red;
+    }
+    <br><br>
+    *#maincontent {<br>
+    border: 1px solid blue;
+    }
+    <br><br>
+    .floating {<br>
+    float: left
+    }
+    <br><br>
+    /* automatically clear the next sibling after a floating element */<br>
+    .floating + * {<br>
+    clear: left;
+    }
+    <br><br>
+    <br>
+    &lt;p class=&quot;warning&quot;&gt;<br>
+    &lt;span lang=&quot;en-us&quot;&gt;A green span&lt;/span&gt; in a red paragraph.
+    &lt;/p&gt;<br>
+    &lt;p id=&quot;maincontent&quot; lang=&quot;en-gb&quot;&gt;<br>
+    &lt;span class=&quot;warning&quot;&gt;A red span&lt;/span&gt; in a green paragraph.
+    &lt;/p&gt;
+    <hr><br>
+    <p class="warning">
+      <span lang="en-us">A green span</span> in a red paragraph.
+    </p>
+    <p id="maincontent" lang="en-gb">
+      <span class="warning">A red span</span> in a green paragraph.
+    </p>
+  </main>
+</body>
+
+</html>
