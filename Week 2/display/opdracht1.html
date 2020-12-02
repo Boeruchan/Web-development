@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    div.static {
+        position: static;
+        border: 3px solid #73AD21;
+    }
+
+    div.relative {
+        position: relative;
+        left: 30px;
+        border: 3px solid #73AD21;
+    }
+
+    div.fixed {
+        position: fixed;
+        bottom: 450px;
+        left: 10px;
+        width: 200px;
+        border: 3px solid #73AD21;
+    }
+
+    div.relative2 {
+        position: relative;
+        width: 400px;
+        height: 200px;
+        border: 3px solid #73AD21;
+    }
+
+    div.absolute {
+        position: absolute;
+        top: 80px;
+        right: 0;
+        width: 200px;
+        height: 220px;
+        border: 3px solid #73AD21;
+    }
+    div.sticky {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  padding: 5px;
+  background-color: #cae8ca;
+  border: 2px solid #4CAF50;
+  width: 300px;
+}
+</style>
+
+<body>
+    <nav><a href="../main.html">Main</a></nav>
+    <hr><br>
+    <header>
+        <h1>Het box-model</h1>
+    </header>
+    <main>
+        <h4>Opdracht 1</h4>
+        <p><b>Welke position properties zijn er? Leg voor elke position property uit wat het doet. Geef ook aan welke
+                default position waarde elementen hebben die je gebruikt in html.</b></p>
+
+        <p>Antwoord: Top, right, bottom and left<br>
+            Top: bovenkant van een box
+            Right: rechterkant van een box
+            Nottom: onderkant van een box
+            Left: linkerkant van een box</p>
+
+        <br>
+        <b>Elementen (values) voor de position properties:</b>
+        <p><b>static</b></p>
+        <div class="static">
+            Dit div element heeft position: static;<br>
+            Het is niet gepositioneerd en volgt de basic flow van de pagina
+        </div>
+        <p><b>relative</b></p>
+        <div class="relative">
+            Dit div element heeft position: relative;<br>
+            Deze is neergezet volgens de basic flow van de pagina maar heeft een value gekregen in css left:30px;
+        </div>
+        <p><b>absolute</b></p>
+        <div class="relative">This div element has position: relative;
+            <div class="absolute">Dit div element heeft position: absolute;<br>
+                Deze div wordt geplaatst bij het dichtsbijzijnde ancestor (relative)
+                Maar als deze div geen (relative) heeft dan wordt het document body gebruikt, deze verplaatst zich
+                tegelijker tijd met het scrollen van de pagina.</div>
+        </div>
+        <p><b>fixed</b></p>
+        <div class="fixed">
+            Dit div element heeft position: fixed;<br> Deze blijft op zijn plek staan op het scherm, zelfs tijdens het scrollen.
+        </div>
+        <p><b>sticky</b></p>
+        <div class="sticky">I am sticky!</div>
+
+<div style="padding-bottom:1000px">
+  <p>In this example, the sticky element sticks to the top of the page (top: 0), when you reach its scroll position.</p>
+  <p>Scroll back up to remove the stickyness.</p>
+  <p>Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.</p>
+  <p>Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.</p>
+</div>
+        The element is positioned according to the normal flow of the document, and then offset relative to its nearest
+        scrolling ancestor and containing block (nearest block-level ancestor), including table-related elements, based
+        on the values of top, right, bottom, and left. The offset does not affect the position of any other elements.
+        This value always creates a new stacking context. Note that a sticky element "sticks" to its nearest ancestor
+        that has a "scrolling mechanism" (created when overflow is hidden, scroll, auto, or overlay), even if that
+        ancestor isn't the nearest actually scrolling ancestor. This effectively inhibits any "sticky" behavior (see the
+        GitHub issue on W3C CSSWG).
+</body>
+
+</html>

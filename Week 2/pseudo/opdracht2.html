@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+video::backdrop {
+  background-color:red;
+}
+::grammar-error {
+    text-decoration: underline red;
+  color: red;
+}
+::placeholder {
+  color: green;
+}
+
+.force-opaque::placeholder {
+  opacity: 1;
+}
+/* Make selected text gold on a red background */
+::selection {
+  color: gold;
+  background-color: red;
+} 
+
+/* Make selected text in a paragraph white on a blue background */
+.select::selection {
+  color: white;
+  background-color: blue;
+}
+
+li::marker {
+  color: red;
+  font-size: 1.5em;
+}
+q::before { 
+  content: "«";
+  color: blue;
+}
+
+q::after { 
+  content: "»";
+  color: red;
+}
+::-moz-progress-bar {
+  background-color: red;
+}
+
+/* Force indeterminate bars to have zero width */
+:indeterminate::-moz-progress-bar {
+  width: 0;
+}
+progress {
+  -webkit-appearance: none;
+}
+
+::-webkit-progress-value {
+  background-color: orange;
+}
+</style>
+
+<body>
+    <nav><a href="../main.html">Main</a></nav>
+    <hr><br>
+    <header>
+        <h1>Pseudo-elementen</h1>
+    </header>
+    <main>
+        <h4>Opdracht 2+3<br>
+            Er zijn 14 verschillende pseudo elementen. Je hebt in de voorgaande opdracht reeds 4 kunnen benoemen. Kun
+            je de andere 10 ook benoemen en aangeven wat ze precies doen?</b></h4>
+    <hr>
+    <p>::backdrop maakt bijvoorbeeld bij een video in fullscreen een andere kleur. <br>
+    Normaal is deze zwart maar door zelf een kleur te geven in css kunnen we die rood maken.</p>
+<video width="320" height="240" controls>
+    <source src="img\Dancing Turtle.mp4">
+        </video>
+        <hr>
+
+<p>::grammar-error --> ook al staat het op de website. Het werkt niet want het is nog in test fase</p>
+<hr>
+<p>::placeholder --> <input placeholder="Default opacity...">
+    <input placeholder="Full opacity..." class="force-opaque"></p>
+<hr>
+This text has special styles when you highlight it.
+<p class="select">Also try selecting text in this paragraph.</p>
+<hr>
+<ul>
+    <li>Peaches</li>
+    <li>Apples</li>
+    <li>Plums</li>
+  </ul>
+  <hr>
+  <q>Some quotes</q>, he said, <q>are better than none.</q>
+  <hr>
+  <progress value="30" max="100">30%</progress>
+<progress max="100">Indeterminate</progress>
+<hr>
+<progress value="10" max="50"></progress>
+</body>
+
+</html>

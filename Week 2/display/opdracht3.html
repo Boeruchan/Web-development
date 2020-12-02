@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    div.fixed {
+        position: fixed;
+        top: 50px;
+        right: 50px;
+        width: 300px;
+        height: 150px;
+        border: 3px solid #73AD21;
+    }
+
+    div.absolute {
+        position: relative;
+        top: 30px;
+        right: 20px;
+        width: 300px;
+        border: 3px solid red;
+    }
+
+    h1 {
+        color: rgb(255, 0, 0)
+    }
+
+    .none {
+        color: black;
+    }
+</style>
+<body>
+    <nav><a href="../main.html">Main</a></nav>
+    <hr><br>
+    <header>
+        <h1 class="none">Het box-model</h1>
+    </header>
+    <main>
+        <h4>Opdracht 3</h4>
+        Zie de onderstaande HTML code.
+        <pre>
+        &lt;h1&gt;Dit is een titel&lt;/h1&gt;
+        &lt;p&gt;Dit is een paragraaf.&lt;/p&gt;
+        &lt;p&gt;Dit is nog een paragraaf.&lt;/p&gt;
+    </pre>
+        <b>Zorg er nu voor dat het &lt;h1&gt; element uit de voorgaande opdracht 20px links <br> en 30px naar onder wordt
+                geplaatst, relatief t.o.v. diens normale positie.</b><br>
+        <div class="fixed">
+            <h1>Dit is een titel</h1>
+            <p>Dit is een paragraaf.</p>
+            <p>Dit is nog een paragraaf.</p>
+      
+        <div class="absolute">
+            <h1>Dit is een titel</h1>
+            <p>Dit is een paragraaf.</p>
+            <p>Dit is nog een paragraaf.</p>
+        </div>
+    </div>
+</body>
+
+</html>

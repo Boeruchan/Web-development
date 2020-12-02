@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+       div.relative {
+        position: relative;
+        left: 50px;
+        top: 100px;
+        width: 300px;
+        border: 3px solid blue;
+    }
+    div.fixed {
+        position: fixed;
+        top: 50px;
+        right: 50px;
+        width: 300px;
+        height: 150px;
+        border: 3px solid #73AD21;
+    }
+    
+    div.fixed2 {
+        position: fixed;
+        top: 100px;
+        left: 50px;
+        width: 300px;
+        height: 150px;
+        border: 3px solid #73AD21;
+    }
+    
+    div.absolute {
+        position: relative;
+        top: 30px;
+        right: 20px;
+        width: 300px;
+        border: 3px solid red;
+    }
+
+    h1 {
+        color: rgb(255, 0, 0)
+    }
+
+    .none {
+        color: black;
+    }
+</style>
+
+<body>
+    <nav><a href="../main.html">Main</a></nav>
+    <hr>
+    <header>
+        <h1 class="none">Het box-model</h1>
+    </header>
+    <br><br><br><br><br><br><br><br>
+    <main>
+        <h4>Opdracht 3</h4>
+        Zie de onderstaande HTML code.
+        <pre>
+        &lt;h1&gt;Dit is een titel&lt;/h1&gt;
+        &lt;p&gt;Dit is een paragraaf.&lt;/p&gt;
+        &lt;p&gt;Dit is nog een paragraaf.&lt;/p&gt;
+    </pre>
+        <b>Zorg er nu voor dat het &lt;h1&gt; element uit opdracht 2 50px links en 100px <br> van de
+            top wordt geplaatst relatief t.o.v. de HTML pagina.</b><br>
+        <div class="fixed">
+            <h1>Dit is opdracht 2</h1>
+            <p>Dit is een paragraaf.</p>
+            <p>Dit is nog een paragraaf.</p>
+
+            <div class="absolute">
+                <h1>Dit opdracht 3</h1>
+                <p>Dit is een paragraaf.</p>
+                <p>Dit is nog een paragraaf.</p>
+            </div>
+        </div>
+        <div class="fixed2">
+            <h1>Dit is opdracht 4</h1>
+            <p>Dit is een paragraaf.</p>
+            <p>Dit is nog een paragraaf.</p>
+        </div>
+</body>
+
+</html>

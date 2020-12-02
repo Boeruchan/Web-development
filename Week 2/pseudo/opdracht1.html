@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    p::first-line {
+        color: #ff0000;
+        font-variant: small-caps;
+    }
+
+    p::first-letter {
+        color: blue;
+        font-size: xx-large;
+    }
+
+    .ribbon {
+        background-color: #5BC8F7;
+    }
+
+    .ribbon::before {
+        content: "Look at this orange box.";
+        background-color: #FFBA10;
+        border-color: black;
+        border-style: dotted;
+    }
+
+    .ribbon2 {
+        background-color: greenyellow;
+    }
+
+    .ribbon2::after {
+        content: "Look at this red box.";
+        background-color: red;
+        border-color: black;
+        border-style: dotted;
+    }
+</style>
+
+<body>
+    <nav><a href="../main.html">Main</a></nav>
+    <hr><br>
+    <header>
+        <h1>Pseudo-elementen</h1>
+    </header>
+    <main>
+        <h4>Opdracht 1</h4>
+        <h6><b>Kun je enkele voorbeelden geven van pseudo-elementen (minimaal 4)?
+                Beschrijf met je eigen woorden wat deze pseudo-elementen inhouden.</b></h6>
+
+        <p>Antwoord: ;;after, ;;before, ;;first-letter, ;;first-line, ;;selection</p>antwoord:
+        <hr>
+        <p class="line"> Lorem ipsum
+            dolor, sit amet consectetur adipisicing elit. Vero exercitationem, provident dolores pariatur recusandae ut
+            non ullam eligendi nobis velit. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptas iusto
+            placeat quibusdam ullam cupiditate, dolor magni, a adipisci quia vero natus harum quo quis beatae,
+            doloremque sequi veritatis quam est autem. Aliquid laboriosam ad velit. Rerum quaerat, sequi fugit ea, earum
+            libero fugiat debitis totam molestias voluptatum esse eaque delectus?</p>
+        <p class="letter"> Lorem ipsum
+            dolor, sit amet consectetur adipisicing elit. Vero exercitationem, provident dolores pariatur recusandae ut
+            non ullam eligendi nobis velit. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptas iusto
+            placeat quibusdam ullam cupiditate, dolor magni, a adipisci quia vero natus harum quo quis beatae,
+            doloremque sequi veritatis quam est autem.</p>
+        <p class="letter">Aliquid laboriosam ad velit. Rerum quaerat, sequi fugit ea, earum
+            libero fugiat debitis totam molestias voluptatum esse eaque delectus?</p>
+
+        <span class="ribbon">Notice where the orange box is.</span>
+        <span class="ribbon">test test test</span>
+        <br><br>
+        <span class="ribbon2">Notice where the red box is.</span>
+        <span class="ribbon2">test test test</span>
+        <hr><br>
+        <pre> p::first-line {
+                color: #ff0000;
+                font-variant: small-caps;
+              }
+First-line: Eerste zin/lijn van de paraaf is explicit rood.</pre>
+        <hr><br>
+        <pre>p::first-letter {
+    color: blue;
+    font-size: xx-large;
+  }
+
+First-letter: Eerste letter van de paraaf is groter gemaakt.
+<br>
+<hr>
+<pre>.ribbon {
+    background-color: #5BC8F7;
+  }
+  
+  .ribbon::before {
+    content: "Look at this orange box.";
+    background-color: #FFBA10;
+    border-color: black;
+    border-style: dotted;
+  }
+
+  &lt;span class=&quot;ribbon&quot;&gt;test test test&lt;/span&gt;
+
+Before: door ::before wordt (content) als eerst geplaatst.
+</pre>
+        <hr>
+        <pre>
+.ribbon2 {
+    background-color:greenyellow;
+  }
+  
+  .ribbon2::after {
+    content: "Look at this red box.";
+    background-color: red;
+    border-color: black;
+    border-style: dotted;
+  }
+
+  &lt;span class=&quot;ribbon2&quot;&gt;test test test&lt;/span&gt;
+
+  After: door ::after wordt (content) als laatst geplaatst.
+</pre>
+</body>
+
+</html>
