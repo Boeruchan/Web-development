@@ -5,7 +5,37 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+<style>
+    #box {
+  width: 200px;
+  height: 200px;
+  background: steelblue;
+  margin: 50px auto;
+  position: relative;
+  }
+#box:before {
+  content: '';
+  display: block;
+  width: 200px;
+  height: 200px;
+  background: steelblue;
+  position: absolute;
+  transform: rotate(65deg);
+  -webkit-transform: rotate(65deg);
+  }
+  #box:after {
+  content: '';
+  display: block;
+  width: 200px;
+  height: 200px;
+  background: steelblue;
+  position: absolute;
+  transform: rotate(30deg);
+  -webkit-transform: rotate(30deg);
+  }
+</style>
 <body>
+    <div id="box"></div>
     
 </body>
-</html>
+</html>!
