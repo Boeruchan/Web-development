@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .flexcontainer-end {
+        display: flex;
+        align-items: flex-end;
+        padding: 0;
+        margin: 10px;
+        /* list-style: none; */
+        background-color: black;
+    }
+    .flexcontainer-start {
+        display: flex;
+        align-items: flex-start;
+        padding: 0;
+        margin: 5px;
+        background-color: black;
+    }
+    .flexcontainer-center {
+        display: flex;
+        align-items: center;
+        padding: 0;
+        margin: 5px;
+        background-color: black;
+    }
+    .flexcontainer-stretch {
+        display: flex;
+        align-items: stretch;
+        padding: 0;
+        margin: 5px;
+        background-color: black;
+    }
+    .flexcontainer-baseline {
+        display: flex;
+        align-items: baseline;
+        padding: 0;
+        margin: 5px;
+        background-color: black;
+    }
+
+    .flexitem {
+        background: red;
+        display: block;
+        padding: 30px;
+        margin: 15px;
+        font-size: 30px;
+        text-align: center;
+    }
+    .flexitem-groot {
+        background: red;
+        display: block;
+        padding: 100px;
+        margin: 15px;
+        font-size: 50px;
+        text-align: center;
+    }
+    .flexitem-medium {
+        background: red;
+        display:block;
+        padding: 80px;
+        margin: 15px;
+        font-size: 50px;
+        text-align: center;
+    }
+</style>
+
+<body>
+    <nav><a href="../main.html">Main</a></nav>
+    <hr><br>
+    <header>
+        <h1>Flexbox</h1>
+    </header>
+    <main>
+        <h4>Opdracht 5</h4>
+        <br>
+        <p>De property ‘align-items’ is een property die door flex gebruikt wordt. Maak verschillende voorbeelden door
+            gebruik te maken van de align-items property.</p><br>           
+            <p>align-item: flex-end</p>
+        <ul class=flexcontainer-end>
+            <li class="flexitem">1</li>
+            <li class="flexitem-medium">2</li>
+            <li class="flexitem">3</li>
+            <li class="flexitem-groot">4</li>
+            <li class="flexitem">5</li>
+            <li class="flexitem-medium">6</li>
+            <li class="flexitem">7</li>
+        </ul>
+            <p>align-item: flex-start</p>
+            <ul class=flexcontainer-start>
+                <li class="flexitem">1</li>
+                <li class="flexitem-medium">2</li>
+                <li class="flexitem">3</li>
+                <li class="flexitem-groot">4</li>
+                <li class="flexitem">5</li>
+                <li class="flexitem-medium">6</li>
+                <li class="flexitem">7</li>
+            </ul>
+                <p>align-item: center</p>
+                <ul class=flexcontainer-center>
+                    <li class="flexitem">1</li>
+                    <li class="flexitem-medium">2</li>
+                    <li class="flexitem">3</li>
+                    <li class="flexitem-groot">4</li>
+                    <li class="flexitem">5</li>
+                    <li class="flexitem-medium">6</li>
+                    <li class="flexitem">7</li>
+                </ul>
+                    <p>align-item: stretch</p>
+                    <ul class=flexcontainer-stretch>
+                        <li class="flexitem">1</li>
+                        <li class="flexitem-medium">2</li>
+                        <li class="flexitem">3</li>
+                        <li class="flexitem-groot">4</li>
+                        <li class="flexitem">5</li>
+                        <li class="flexitem-medium">6</li>
+                        <li class="flexitem">7</li>
+                    </ul>
+                        <p>align-item: baseline</p>
+                        <ul class=flexcontainer-baseline>
+                            <li class="flexitem">1</li>
+                            <li class="flexitem-medium">2</li>
+                            <li class="flexitem">3</li>
+                            <li class="flexitem-groot">4</li>
+                            <li class="flexitem">5</li>
+                            <li class="flexitem-medium">6</li>
+                            <li class="flexitem">7</li>
+        </ul>
+</body>
+
+</html>
