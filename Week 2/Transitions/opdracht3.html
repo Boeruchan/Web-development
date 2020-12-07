@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    /* .circle {
+    width: 100px;
+    height: 100px;
+    background-color: magenta;
+    transition: background-color 1s ease-in, border-radius 1s, margin-left 3s;
+} */
+
+    /* .circle:hover {
+    background-color: cyan;
+    border-radius: 50%;
+} */
+
+    div {
+        width: 100px;
+        height: 100px;
+        margin: 20px;
+        background-color: turquoise;
+        border: 1px solid black;
+        text-align: center;
+        transition: all 3s ease-in-out;
+    }
+
+    section:hover div {
+        margin-left: 500px;
+        background-color: magenta;
+    }
+
+    section:hover .circle {
+        border-radius: 50%;
+    }
+
+    section:hover .rand {
+        border-radius: 20px;
+    }
+
+     div:nth-of-type(1) {
+        transition-timing-function: cubic-bezier(0.65, 0, 0.35, 1); 
+    }
+
+     div:nth-of-type(2) {
+        transition-timing-function: ease-in;
+     
+    }
+
+     div:nth-of-type(3) {
+        transition-duration: 5s;
+        transition-timing-function: ease-out;
+    }
+
+     div:nth-of-type(4) {
+        transition-timing-function: ease-out;
+        transition-delay: 1s;
+    }
+
+    section:hover div:nth-of-type(5) {
+        left: 0;
+        top: 0;
+        position: relative;
+        margin: 20px;
+        animation-name: example;
+        animation-duration: 4s;
+        animation-fill-mode: both;
+        animation-direction: alternate;
+    }
+
+    @keyframes example {
+        0% {
+            background-color: turquoise;
+        }
+
+        25% {
+            left: 200px;
+        }
+
+        40% {
+            left: 160px;
+        }
+
+        100% {
+            background-color: magenta;
+            left: 480px;
+        }
+    }
+
+    p {
+        text-align: center;
+    }
+</style>
+
+<body>
+    <nav><a href="../main.html">Main</a></nav>
+    <hr><br>
+    <header>
+        <h1>Transition</h1>
+    </header>
+    <main>
+        <h4>Opdracht 3</h4>
+
+        <section>
+            <div class="circle"></div>
+            <div class="rand"></div>
+            <div></div>
+            <div></div>
+            <div></div>
+        </section>
+    </main>
+</body>
+
+</html>

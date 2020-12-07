@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    main {
+        position: relative;
+        display: block;
+        width: 800px;
+        height: 400px;
+        padding: 0;
+        border: 1px solid blue;
+        background-color: yellow;
+    }
+    
+    main div:nth-of-type(3) {
+        position: absolute;
+        display: block;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        width: 50px;
+        height: 50px;
+        margin: 0px;
+        background-color: red;
+        animation-name: example;
+        animation-duration: 5s;
+        animation-delay: 2s;
+        animation-iteration-count: infinite;
+        transition: transform 0.6s cubic-bezier(.3,.74,1,-0.14);
+
+    div:nth-of-type(3)
+
+    }
+
+    @keyframes example {
+        0% {
+            left: 0px;
+            top: 350px;
+        }
+
+        25% {
+            left: 350px;
+            top: 350px;
+        }
+
+        50% {
+            left: 350px;
+            top: 178px;
+        }
+
+        75% {
+            left: 0px;
+            top: 178px;
+        }
+
+        100% {
+            left: 0px;
+            top: 350px;
+        }
+    }
+
+    div:nth-of-type(2) {
+        position: absolute;
+        display: block;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        width: 50px;
+        height: 50px;
+        margin: 0px;
+        background-color: red;
+        position: relative;
+        animation-name: example2;
+        animation-duration: 8s;
+        transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+        animation-iteration-count: infinite;
+        animation-direction: forward;
+    }
+
+    @keyframes example2 {
+        0% {
+            left: 0px;
+            top: 0px;
+        }
+
+        25% {
+            left: 0px;
+            top: 0px;
+        }
+
+        50% {
+            left: 350px;
+            top: 178px;
+        }
+
+        75% {
+            left: 350px;
+            top: 178px;
+            
+        }
+
+        100% {
+            left: 0px;
+            top: 0px;
+        }
+    }
+
+    div:nth-of-type(1) {
+        position: absolute;
+        display: block;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        width: 50px;
+        height: 50px;
+        margin: 0px;
+        background-color: red;
+        animation-name: example1;
+        animation-duration: 8s;
+        transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+        animation-iteration-count: infinite;
+        animation-direction: forward;
+    }
+
+    @keyframes example1 {
+        0% {
+            left: 750px;
+            top: 0px;
+        }
+
+        25% {
+            left: 750px;
+            top: 0px;
+        }
+
+        50% {
+            left: 350px;
+            top: 178px;
+        }
+
+        75% {
+            left: 350px;
+            top: 178px;
+            
+        }
+
+        100% {
+            left: 750px;
+            top: 0px;
+        }
+    }
+
+    p {
+        text-align: center;
+    }
+</style>
+
+<body>
+    <nav><a href="../main.html">Main</a></nav>
+    <hr><br>
+    <header>
+        <h1>Transition</h1>
+    </header>
+    <h4>Opdracht 4</h4>
+    <main>
+
+
+        <div></div>
+        <div></div>
+        <div></div>
+
+    </main>
+</body>
+
+</html>
