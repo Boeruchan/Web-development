@@ -18,11 +18,13 @@
     img {
         width: 150px;
         height: 150px;
-        
+        transition: 2s;
+
     }
 
 img:hover {
-    background-color: rgb(94, 84, 84);
+    background-color: black;
+    opacity: 50%;
   
 }
  div {
@@ -32,6 +34,7 @@ img:hover {
         height: 150px;
         background-color: yellow;
         transition: 3s;
+        z-index: 990;
        
     }
 
@@ -39,17 +42,20 @@ img:hover {
         top:0;
         transform-origin: 150px 250px;
         transform: rotate(-100deg);
+      
     }
+
+.overlay:hover~img {
+    opacity:0;
+}
 
 </style>
 
 <body>
     <main>
-        <img src="img/img2.jpeg"></div>
         <div class="overlay"></div>
+        <img src="img/img2.jpeg"></div>
     </main>
-  
-    <img src="img/img2.jpeg"></img>
     
 </body>
 
