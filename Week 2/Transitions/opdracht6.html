@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .container {
+        width: 450px;
+        height: 250px;
+        background-color: darkgreen;
+        padding: 100px;
+        display: flex;
+        position: absolute;
+    }
+
+    .card {
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        margin-left: -50px;
+        width: 150px;
+        height: 220px;
+        border-radius: 10px;
+        background: white;
+        border: 2px solid black;
+        transition: all 0.5s ease-in-out;
+        align-items: center;
+        color: black;
+    }
+
+    .card:hover {
+        transform: translate(50px, -20px);
+        z-index: 1;
+    }
+
+    .card:hover~.card {
+        transform: translate(50px, 0px);
+        background-color: red;
+    }
+
+    img {
+        width: 100px;
+        height: 100px;
+    }
+</style>
+
+<body>
+    <div class="container">
+        <div class="card">
+            <h3 class="card__title">Kaart</h3>
+            <p>Schildpad</p>
+            <img src="img/img2.jpeg" alt="">
+        </div>
+        <div class="card">
+            <h3>Kaart</h3>
+            <p>Goudvis</p>
+            <img src="img/img2.jpeg" alt="">
+        </div>
+        <div class="card">
+            <h3>Kaart</h3>
+            <p>Cavia</p>
+            <img src="img/img2.jpeg" alt="">
+        </div>
+        <div class="card">
+            <h3>Kaart</h3>
+            <p>Hamster</p>
+            <img src="img/img2.jpeg" alt="">
+        </div>
+    </div>
+</body>
+
+</html>

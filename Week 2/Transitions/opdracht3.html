@@ -62,33 +62,7 @@
     }
 
     section:hover div:nth-of-type(5) {
-        left: 0;
-        top: 0;
-        position: relative;
-        margin: 20px;
-        animation-name: example;
-        animation-duration: 4s;
-        animation-fill-mode: both;
-        animation-direction: alternate;
-    }
-
-    @keyframes example {
-        0% {
-            background-color: turquoise;
-        }
-
-        25% {
-            left: 200px;
-        }
-
-        40% {
-            left: 160px;
-        }
-
-        100% {
-            background-color: magenta;
-            left: 480px;
-        }
+       transition-timing-function: cubic-bezier(.25,1.15,.51,-0.62);
     }
 
     p {
