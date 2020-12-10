@@ -42,7 +42,7 @@ li a.active {
   width: 100%;
 }
 
-header img {
+#headerimg {
   opacity: 0.5;
   height: 100%;
   min-height: 200px;
@@ -64,8 +64,8 @@ Header .box {
   display: flex;
   justify-content: flex-end;
   top: 10%;
-  right: 20%;
-  width: 60%;
+  right: 10%;
+  width: 50%;
   height: 30%;
 }
 
@@ -141,7 +141,7 @@ a {
   background-color: #a79494;
 }
 
-.menu img {
+#chef {
   margin-top: 110px;
   height: 600px;
   width: 350px;
@@ -190,4 +190,24 @@ li {
   color: rgb(97, 135, 216);
   list-style-type: none;
   line-height: 2px;
+}
+
+@media (max-width: 629px) {
+  li a {
+    text-align: center;
+  }
+  #chef {
+    display: none;
+  }
+  #headerimg {
+    min-height: 300px;
+  }
+  header .box {
+    justify-content: center;
+  }
+  .test {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
 }
