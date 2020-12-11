@@ -2,119 +2,130 @@ body {
   background-color: rgb(250, 250, 236);
   font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
     "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
-}
-
-.body2 {
   display: flex;
   flex-direction: row;
-  /* flex-direction: column; */
-  width: 100%;
-  margin: 20px 40px;
+  margin: 0;
+  min-height: 100vh;
 }
 
-nav {
+/* navigation */
+
+.vertical-menu {
   background-color: #4b86cb;
+  width: 200px;
+  height: 96%;
+}
+
+.vertical-menu a {
+  color: black;
+  display: block;
+  padding: 20px;
+  text-decoration: none;
+}
+
+.vertical-menu a:hover {
+  background-color: #ccc;
+}
+
+.vertical-menu a.active {
+  background-color: #4caf50;
   color: white;
-  text-align: center;
-  /* height: 1200px; */
-  width: 300px;
 }
 
 .white {
   color: white;
 }
-nav ul {
-  color: white;
-  list-style-type: none;
-  text-align: left;
-}
-
-nav a {
-  color: white;
-  text-decoration: none;
-  line-height: 40px;
-  padding-right: 20px;
-}
 
 nav h2 {
   background-color: #4b86cb;
   text-align: center;
-  border-bottom: 1px solid white;
-  padding-bottom: 15px;
+  padding: 20px;
+  border-bottom: 2px solid white;
+  margin-bottom: -1px;
 }
 
-.profile {
-  position: relative;
+main {
   display: flex;
-  flex-direction: column;
-  justify-content: center;
-  width: 100%;
-  height: 100%;
-  align-items: center;
-  margin: 20px 20px;
+  margin: 0px 30px;
 }
 
-.profile .background img {
-  width: 400px;
-  height: 150px;
-  border-bottom: 2px solid #4b86cb;
-  border-top-left-radius: 10%;
-  border-top-right-radius: 10%;
-}
+/* content 1 = profile */
 
-.cat img {
-  position: absolute;
-  top: 50px;
-  left: 120px;
-  width: 200px;
-  height: 200px;
-  border-radius: 50%;
-  z-index: 2;
-  border: 2px solid #4b86cb;
-}
-
-.profile .text {
-  top: 70px;
-  color: #4b86cb;
+.content1 {
+  width: 60%;
+  /* background-color: yellow; */
+  margin: 20px 30px;
+  z-index: -1;
   text-align: center;
-  height: 220px;
-  width: 200px;
+  align-items: center;
 }
 
-h1 {
-  color: black;
-}
-
-.profile a {
-  color: #4b86cb;
-  margin-top: -15px;
-}
-
-.profile p {
-  color: black;
-}
-
-.profile .icons {
+.background {
   position: relative;
+  height: 150px;
+  background-image: url(img/animal-crossing-wallpaper.original.jpg);
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  border-bottom: 8px solid #4b86cb;
+  border-top-left-radius: 25px;
+  border-top-right-radius: 25px;
+}
+
+.background::before {
+  content: "";
+  position: absolute;
+  background-image: url(img/gif1.gif);
+  background-repeat: no-repeat;
+  background-size: 100% 150%;
+  top: 30%;
+  left: 25%;
+  width: 50%;
+  height: 120%;
+  border-radius: 50%;
+}
+
+.background::after {
+  content: "";
+  position: absolute;
+  top: 23%;
+  left: 23%;
+  width: 50%;
+  height: 120%;
+  border-radius: 50%;
+  border: 10px solid #4b86cb;
+  z-index: -1;
+}
+
+.filling {
+  height: 60px;
+}
+
+.textblock {
+  margin: auto;
+  width: 50%;
+}
+
+.textblock h1 {
+  margin-bottom: 10px;
+}
+
+.icons {
   top: 45px;
   border-top: 1px solid #4b86cb;
   display: flex;
   justify-content: space-evenly;
-  width: 330px;
   padding: 10px;
   z-index: 1;
 }
 
-.grafiek img {
-  position: absolute;
-  top: 35px;
-  width: 400px;
-  height: 350px;
+/* content 2 = personal, language, frame */
+
+.content2 {
+  width: 100%;
+  /* background-color:lightgray; */
+  padding: 0px 30px;
 }
 
-content {
-  margin-left: 40px;
-}
 h3 {
   background-color: #4b86cb;
   border-top-left-radius: 25px;
@@ -123,10 +134,14 @@ h3 {
   padding: 10px 20px;
 }
 
+/* personal */
+
 #lijn {
   border-bottom: 1px solid #4b86cb;
   padding-left: 5px;
 }
+
+/* languages */
 
 .languages {
   width: 100%;
@@ -159,6 +174,8 @@ h3 {
   font-size: 40px;
 }
 
+/* page 2 */
+
 .members {
   display: flex;
   flex-direction: column;
@@ -184,6 +201,8 @@ th {
   background-color: #a0aec0;
 }
 
+/* additional information */
+
 form {
   margin-left: 10%;
   margin-bottom: 10%;
@@ -200,11 +219,4 @@ input[type="text"] {
 label {
   margin: 5px;
   display: inline-block;
-}
-
-@media only screen (max-widht: 260px) {
-  body {
-    display: flex;
-    flex-direction: column;
-  }
 }
