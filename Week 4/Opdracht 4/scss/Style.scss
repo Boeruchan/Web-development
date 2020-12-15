@@ -1,0 +1,10 @@
+@import "../abstract/mixins";
+
+
+button {
+    @include prettier;
+    width: 200px;
+    height: 100px;
+    border-radius: 30px;
+    border: none;
+}

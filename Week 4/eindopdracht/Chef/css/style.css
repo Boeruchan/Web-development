@@ -1,0 +1,235 @@
+@import url("https://fonts.googleapis.com/css2?family=Lobster&display=swap");
+body {
+  background-color: green;
+  font-family: "lobster";
+}
+
+nav {
+  background-color: #aaa5a5;
+}
+
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+nav ul li {
+  float: right;
+}
+
+nav ul a {
+  display: block;
+  color: black;
+  text-align: right;
+  padding: 15px 5px;
+  text-decoration: none;
+}
+
+nav ul a:hover:not(.active) {
+  background-color: #ddd;
+}
+
+nav ul a.active {
+  color: white;
+}
+
+header h1 {
+  color: #6187d8;
+  font-size: 50px;
+}
+
+header p {
+  color: #6187d8;
+  margin-top: -30px;
+}
+
+.headertest {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  width: 100%;
+  height: 100%;
+  background-color: black;
+}
+
+#headerimg {
+  width: 100%;
+  height: 100%;
+  opacity: 0.5;
+  min-height: 200px;
+}
+
+.box {
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  top: 10%;
+  right: 10%;
+  width: 50%;
+  height: 30%;
+}
+
+button {
+  font-family: "lobster";
+  background-color: Transparent;
+  border: 1px solid;
+  cursor: pointer;
+  padding: 5px 30px;
+  color: #6187d8;
+}
+
+.green {
+  color: #80b380;
+}
+
+h2 {
+  font-size: 50px;
+  text-align: center;
+  margin: 0;
+  padding: 20px;
+  background-color: #a79494;
+}
+
+a {
+  text-align: right;
+  width: 250px;
+  text-decoration: none;
+}
+
+section {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  width: 100%;
+  height: 100%;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background-color: #a79494;
+}
+
+section .box1 {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  height: 350px;
+  width: 250px;
+  margin: 50px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+section img {
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+}
+
+.h3text {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 250px;
+  margin-bottom: -25px;
+}
+
+.menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  width: 100%;
+  height: 100%;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 10px;
+  background-color: #a79494;
+}
+
+#chef {
+  margin-top: 110px;
+  height: 600px;
+  width: 350px;
+}
+
+.menutext {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin: 10px;
+  width: 830px;
+  padding: 10px;
+}
+
+.menu1 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  height: 150px;
+  width: 250px;
+  margin: 10px;
+}
+
+Footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  width: 100%;
+  height: 100%;
+  color: #6187d8;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 20px;
+}
+
+Footer p {
+  line-height: 5px;
+}
+
+Footer p .icons {
+  font-size: 20px;
+  margin-top: 20px;
+}
+
+.navigation a,
+li {
+  text-align: left;
+  color: #6187d8;
+  list-style-type: none;
+  line-height: 20px;
+}
+/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,11 @@
+button {
+  width: 200px;
+  height: 100px;
+  border-radius: 10px;
+  background-color: $button-color;
+  color: white;
+  &:hover {
+    transform: translateY(-5px);
+    background-color: $button-hover-color;
+  }
+}

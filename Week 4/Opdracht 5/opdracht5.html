@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Opdracht 5</title>
+  </head>
+  <body>
+    <h1>Opdracht 5</h1>
+
+    <h3>Opdracht 1</h3>
+    <p>
+      We hebben nu zowel mixins als extends gezien die beiden styling kunnen
+      overnemen. Lees dit artikel en geef een uitleg wanneer we inheritance
+      gebruiken en wanneer we mixins gebruiken.
+    </p>
+    <img src="/img/opdracht1.png" alt="" />
+    <p>
+      Using @extend produces DRY CSS. Using @extend creates relationships
+      between selectors and couples them together. The extended and extending
+      selectors might also be located in different parts of your stylesheet
+      making them more difficult to maintain or possibly lead to source order
+      and specificity issues.
+    </p>
+    <p>
+      Use a mixin to either inject dynamic values into repeated constructs, or
+      as a Sassy copy/paste which allows you to repeat the same group of
+      declarations throughout your project whilst keeping a Single Source of
+      Truth. But produces less DRY CSS.
+    </p>
+
+    <h3>opdracht 2</h3>
+    <pre>
+/// @example scss - With a single set breakpoint
+///  @include media('>phone') { }
+///
+/// @example scss - With two set breakpoints
+///  @include media('>phone', '<=tablet') { }
+///
+/// @example scss - With custom values
+///  @include media('>=358px', '<850px') { }
+///
+/// @example scss - With set breakpoints with custom values
+///  @include media('>desktop', '<=1350px') { }
+
+
+@include media(""<=phone") {
+    background-color: $orange;
+    &before {
+        content: "phone viewport";
+    }
+}
+
+@inlcude media(">phone", "<=425px") {
+    background-color: $purple;
+    &:before {
+        content: "large phone viewport";
+    }
+}
+
+    </pre>
+  </body>
+</html>

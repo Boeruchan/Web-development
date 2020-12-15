@@ -1,0 +1,16 @@
+button {
+  background-color: #5ad9f0;
+  color: purple;
+  -webkit-transition: 1s ease-in;
+  transition: 1s ease-in;
+  width: 200px;
+  height: 100px;
+  border-radius: 30px;
+  border: none;
+}
+
+button:hover {
+  background-color: purple;
+  color: #5ad9f0;
+}
+/*# sourceMappingURL=Style.css.map */
