@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Opdracht 1</title>
+  </head>
+  <body>
+    <script>
+      //   opdracht 16.1
+      const woord = "schildpad";
+      console.log(woord.charAt(0));
+
+      //   opdracht 16.2
+      const twWoord = "food";
+      let drWoord = woord.concat(twWoord);
+      console.log(drWoord);
+
+      // opdracht 16.3
+      const zin = "Vandaag heb ik mijn schildpad in de tuin laten lopen.";
+      let sliced = zin.slice(11, -6);
+      let splitted = zin.split(" ", 3);
+      console.log(sliced);
+      console.log(splitted);
+      console.log("(1,2): " + zin.substr(1, 2));
+      console.log("<br />(-2,2): " + zin.substr(-2, 2));
+      console.log("<br />(1): " + zin.substr(1));
+      console.log("<br />(20, 2): " + zin.substr(20, 2));
+
+      let oliebollen = 16;
+      let poedersuiker = oliebollen++ / 2;
+      console.log("oliebollen " + oliebollen);
+      console.log("poedersuiker " + poedersuiker);
+    </script>
+    <h1>Moduul 1</h1>
+
+    <h3>Opdracht 16</h3>
+    <h4>1. charAt()</h4>
+    <p>
+      Met charAt() kan je een letter of cijfer laten kiezen van de grootte van
+      het woord. Let op, het start op 0 niet op 1.
+    </p>
+    <pre>
+  const woord = "schildpad";
+    console.log(woord.charAt(5));</pre
+    >
+    <img src="img/Opdracht16-1.png" alt="" width="800px" />
+    <img src="img/Opdracht16-1a.png" alt="" width="800px" />
+    <h4>2. concat()</h4>
+    <p>Met concat() combineerd 2 strings in een nieuwe string.</p>
+    <img src="img/Opdracht16-2.png" alt="" width="800px" />
+    <h4>3. slice()</h4>
+    <p>
+      Met slice() kan je een string in de zin snijden. Je kan dan aan het begin
+      en/of bij het einde woorden dan weg laten.
+    </p>
+    <img src="img/Opdracht16-3.png" alt="" width="800px" />
+    <h4>4. split()</h4>
+    <p>
+      Met split() kan je een string splitten. je kan de hoeveelheid text laten
+      zien in console.
+    </p>
+    <img src="img/Opdracht16-4.png" alt="" width="800px" />
+    <h4>5. substr()</h4>
+    <p>
+      Met substr() kan je een zin specifiek ontleden. je kan de hoeveelheid text
+      kiezen en het kan per karakter of per woord. En deze schrijf je in de
+      console.log
+    </p>
+    <img src="img/Opdracht16-5.png" alt="" width="800px" />
+  </body>
+</html>
