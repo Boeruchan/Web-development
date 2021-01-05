@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Conditional</title>
+  </head>
+  <body>
+    <input type="number" name="number" id="num1" />
+    <button id="btn" onclick="checkNumber()">Button</button>
+    <div>
+      <span id="label"></span>
+    </div>
+    <br />
+    <hr />
+    <pre>
+  function checkNumber() {
+    opdracht 1
+    var number001;
+    var numr = num1.value;
+    if (numr == 3) {
+      number001 = "Het ingevoerde getal is gelijk aan 3";
+      document.getElementById("label").innerHTML = number001;
+    }
+    opdracht 2
+    if (numr > 4) {
+      number001 = "Het ingevoerde getal is groter dan 4";
+      document.getElementById("label").innerHTML = number001;
+    }
+    opdracht 3
+    if (numr >= 11) {
+      number001 = "Het ingevoerde getal is gelijk aan en is groter dan 11";
+      document.getElementById("label").innerHTML = number001;
+    }
+    opdracht 4
+      if (numr < 3) {
+      number001 = "Het ingevoerde getal is kleiner dan 3";
+      document.getElementById("label").innerHTML = number001;
+      }
+      <hr>
+    opdracht 5
+    We hebben nu verschillende comparison operators gehad. Wat is het verschil tussen < en <=?
+     < 5 = kleiner dan 5 (alles onder de 5 wordt herkend, de 5 niet.)
+     <= 5 = kleiner en met 5 wordt herkend.
+     <br>
+     opdracht 6
+     We hebben nog een comparison operator niet gehad, namelijk ! comparison. Wat doet een !
+comparison ? Maak een voorbeeld van een ! comparison
+
+
+    </pre>
+    <script>
+      // Opdracht 1
+      function checkNumber() {
+        var number001;
+        var numr = num1.value;
+        if (numr == 3) {
+          number001 = "Het ingevoerde getal is gelijk aan 3";
+          document.getElementById("label").innerHTML = number001;
+        }
+        if (numr > 4) {
+          number001 = "Het ingevoerde getal is groter dan 4";
+          document.getElementById("label").innerHTML = number001;
+        }
+        if (numr >= 11) {
+          number001 = "Het ingevoerde getal is gelijk aan en is groter dan 11";
+          document.getElementById("label").innerHTML = number001;
+        }
+        if (numr < 3) {
+          number001 = "Het ingevoerde getal is kleiner dan 3";
+          document.getElementById("label").innerHTML = number001;
+        }
+      }
+    </script>
+  </body>
+</html>
