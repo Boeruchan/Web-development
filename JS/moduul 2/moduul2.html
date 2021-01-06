@@ -46,6 +46,27 @@
      opdracht 6
      We hebben nog een comparison operator niet gehad, namelijk ! comparison. Wat doet een !
 comparison ? Maak een voorbeeld van een ! comparison
+!= betekent dat het moet de niet hetzelfde getal goed moet keuren.
+<pre>var a = 30;
+     document.getElementById("myId").innerHTML = (a != 10);</pre>
+<b>Assigning 'a' value as 30 and checking the value with '10' in not equal to operator, so the result gives</b>
+<p id="myId"></p>
+Opdracht 7
+Wanneer je een getal hebt ingevoerd en bij de label verschijnt er een tekst, dan blijft de tekst
+voor altijd staan tenzij je de tekst van de label expliciet weghaalt. Schrijf de code van
+opdracht 1 t/m 4 zo dat als de conditie niet waar is dat de tekst van de label verwijdert
+wordt.
+<pre>
+  else {
+    document.getElementById("label").innerHTML = "";
+  }
+</pre>
+Opdracht 8
+Strict equality comparison gaat de ai niet veranderen naar een number of een string.
+Bij == maakt hij geen verschil of het een string of number is.
+bij === ziet hij wel dat het een string of number is dus het is niet hetzelfde.
+<img src="img/opdracht 8.png" alt="">
+
 
 
     </pre>
@@ -57,20 +78,21 @@ comparison ? Maak een voorbeeld van een ! comparison
         if (numr == 3) {
           number001 = "Het ingevoerde getal is gelijk aan 3";
           document.getElementById("label").innerHTML = number001;
-        }
-        if (numr > 4) {
+        } else if (numr > 4) {
           number001 = "Het ingevoerde getal is groter dan 4";
           document.getElementById("label").innerHTML = number001;
-        }
-        if (numr >= 11) {
+        } else if (numr >= 11) {
           number001 = "Het ingevoerde getal is gelijk aan en is groter dan 11";
           document.getElementById("label").innerHTML = number001;
-        }
-        if (numr < 3) {
+        } else if (numr < 3) {
           number001 = "Het ingevoerde getal is kleiner dan 3";
           document.getElementById("label").innerHTML = number001;
+        } else {
+          document.getElementById("label").innerHTML = "";
         }
       }
+      var a = 30;
+      document.getElementById("myId").innerHTML = a != 10;
     </script>
   </body>
 </html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <input type="number" name="number" id="num1" />
+    <button id="btn" onclick="checkNumber()">Button</button>
+    <div>
+      <span id="label"></span>
+    </div>
+    <hr />
+    <pre>
+        Opdracht 9 
+    function checkNumber() {
+      var nmr = num1.value;
+      if (nmr > 5 && nmr < 10) {
+        document.getElementById("label").innerHTML =
+          "Het ingevoerde getal is tussen 5 en 10";
+      } else {
+        document.getElementById("label").innerHTML = "";
+      }
+      opdracht 10
+      if (nmr >= 13 && nmr <= 20) {
+        document.getElementById("label").innerHTML =
+          "Het ingevoerde getal is gelijk aan 13 of groter dan 13 en is gelijk aan 20 of kleiner dan 20";
+      }
+    }
+  </pre
+    >
+
+    <script>
+      function checkNumber() {
+        var nmr = num1.value;
+        if (nmr > 5 && nmr < 10) {
+          document.getElementById("label").innerHTML =
+            "Het ingevoerde getal is tussen 5 en 10";
+        } else {
+          document.getElementById("label").innerHTML = "";
+        }
+        if (nmr >= 13 && nmr <= 20) {
+          document.getElementById("label").innerHTML =
+            "Het ingevoerde getal is gelijk aan 13 of groter dan 13 en is gelijk aan 20 of kleiner dan 20";
+        }
+        if (nmr == 21 || nmr == 23) {
+          document.getElementById("label").innerHTML =
+            "Het ingevoerde getal is gelijk aan 21 of is gelijk aan 23";
+        }
+      }
+    </script>
+  </body>
+</html>
