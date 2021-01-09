@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width,
+initial-scale=1.0"
+    />
+    <title>Functions</title>
+  </head>
+  <body>
+    <h1>Opdracht 5</h1>
+    <input type="naam" name="naam" id="naam" />
+    <p id="answer"></p>
+    <button onclick="answer()">click</button>
+    <script>
+      function answer() {
+        let NameInput = document.getElementById("naam").value;
+        const answer = document.getElementById("answer");
+        const voorNaam = [
+          "",
+          "John",
+          "Oly",
+          "Mo",
+          "Hendrik",
+          "Tony",
+          "Irus",
+          "Jan",
+          "Peter",
+        ];
+        const naamNumber = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
+
+        if (NameInput == naamNumber[0]) {
+          answer.innerText = "Dit is een bekende van ons" + " " + voorNaam[0];
+        } else if (NameInput == naamNumber[1]) {
+          answer.innerText = "Dit is een bekende van ons" + " " + voorNaam[1];
+        } else if (NameInput == naamNumber[2]) {
+          answer.innerText = "Dit is een bekende van ons" + " " + voorNaam[2];
+        } else if (NameInput == naamNumber[3]) {
+          answer.innerText = "Dit is een bekende van ons" + " " + voorNaam[3];
+        } else if (NameInput == naamNumber[4]) {
+          answer.innerText = "Dit is een bekende van ons" + " " + voorNaam[4];
+        } else if (NameInput == naamNumber[5]) {
+          answer.innerText = "Dit is een bekende van ons" + " " + voorNaam[5];
+        } else if (NameInput == naamNumber[6]) {
+          answer.innerText = "Dit is een bekende van ons" + " " + voorNaam[6];
+        } else if (NameInput == naamNumber[7]) {
+          answer.innerText = "Dit is een bekende van ons" + " " + voorNaam[7];
+        } else if (NameInput == naamNumber[8]) {
+          answer.innerText = "Dit is een bekende van ons" + " " + voorNaam[8];
+        } else {
+          answer.innerText = "Onbekend in ons systeem!";
+        }
+      }
+      // Plaats hieronder alle antwoorden van de opdrachten.
+    </script>
+  </body>
+</html>

@@ -6,7 +6,7 @@
     <title>Conditional</title>
   </head>
   <body>
-    <input type="number" name="number" id="num1" />
+    <input type="number" name="number" id="number" />
     <button id="btn" onclick="checkNumber()">Button</button>
     <div>
       <span id="label"></span>
@@ -72,25 +72,46 @@ bij === ziet hij wel dat het een string of number is dus het is niet hetzelfde.
     </pre>
     <script>
       // Opdracht 1
+      // ((Zelf gevonden en geprogameerde code.))
+      // function checkNumber() {
+      //   var number001;
+      //   var numr = num1.value;
+      //   if (numr == 3) {
+      //     number001 = "Het ingevoerde getal is gelijk aan 3";
+      //     document.getElementById("label").innerHTML = number001;
+      //   } else if (numr >= 11) {
+      //     number001 = "Het ingevoerde getal is gelijk aan en is groter dan 11";
+      //     document.getElementById("label").innerHTML = number001;
+      //   } else if (numr > 4) {
+      //     number001 = "Het ingevoerde getal is groter dan 4";
+      //     document.getElementById("label").innerHTML = number001;
+      //   } else if (numr < 3) {
+      //     number001 = "Het ingevoerde getal is kleiner dan 3";
+      //     document.getElementById("label").innerHTML = number001;
+      //   } else {
+      //     document.getElementById("label").innerHTML = "";
+      //   }
+      // }
+
+      // Groeps gezamelijke variant code
       function checkNumber() {
-        var number001;
-        var numr = num1.value;
-        if (numr == 3) {
-          number001 = "Het ingevoerde getal is gelijk aan 3";
-          document.getElementById("label").innerHTML = number001;
-        } else if (numr > 4) {
-          number001 = "Het ingevoerde getal is groter dan 4";
-          document.getElementById("label").innerHTML = number001;
-        } else if (numr >= 11) {
-          number001 = "Het ingevoerde getal is gelijk aan en is groter dan 11";
-          document.getElementById("label").innerHTML = number001;
-        } else if (numr < 3) {
-          number001 = "Het ingevoerde getal is kleiner dan 3";
-          document.getElementById("label").innerHTML = number001;
-        } else {
-          document.getElementById("label").innerHTML = "";
-        }
+        const numberInput = document.getElementById("number").value;
+        const label = document.getElementById("label");
+
+        if (numberInput == 3) {
+          label.innerText = "Het ingevoerde getal is gelijk aan 3";
+        } else if (numberInput >= 11) {
+          label.innerText = "Het ingevoerder getal is groter of gelijk aan 11";
+        } else if (numberInput > 4) {
+          lable.innerText = "Het ingevoerde getal is groter aan 4";
+        // } else if (numberInput !== 3) {
+        //   label.innerText = "";
+        // } else {
+        //   label.innerText = "Het ingevoerde getal is kleiner dan 3";
+        // }
       }
+    }
+
       var a = 30;
       document.getElementById("myId").innerHTML = a != 10;
     </script>
