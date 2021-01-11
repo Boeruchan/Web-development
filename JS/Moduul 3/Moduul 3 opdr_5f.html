@@ -16,42 +16,85 @@ initial-scale=1.0"
     <button onclick="answer()">click</button>
 
     <script>
-      function answer() {
-        let naamInput = document.getElementById("naam").value;
+      // function answer() {
+      //   // let naamInput = document.getElementById("naam").value;
+      //   let naamInput = (document.getElementById(
+      //     "answer"
+      //   ).innerHTML = getRndInteger(1, 9));
+      //   console.log(naamInput);
 
-        switch (naamInput) {
-          case "1":
+      //   switch (naamInput) {
+      //     case "1":
+      //       text = "John is bekend in ons systeem";
+      //       break;
+      //     case "2":
+      //       text = "Oly is bekend in ons systeem";
+      //       break;
+      //     case "3":
+      //       text = "Mo is bekend in ons systeem";
+      //       break;
+      //     case "4":
+      //       text = "Hendrik is bekend in ons systeem";
+      //       break;
+      //     case "5":
+      //       text = "Tony is bekend in ons systeem";
+      //       break;
+      //     case "6":
+      //       text = "Irus is bekend in ons systeem";
+      //       break;
+      //     case "7":
+      //       text = "Jan is bekend in ons systeem";
+      //       break;
+      //     case "8":
+      //       text = "Peter is bekend in ons systeem";
+      //       break;
+      //     default:
+      //       text = "does not exist";
+      //   }
+      //   document.getElementById("answer").innerText = text;
+      // }
+
+      // function getRndInteger(min, max) {
+      //   return Math.round(Math.random() * (max - min + 1));
+      // }
+
+      function answer() {
+        // let naamInput = document.getElementById("naam").value;
+
+        switch (r(1, 9)) {
+          case 1:
             text = "John is bekend in ons systeem";
             break;
-          case "2":
+          case 2:
             text = "Oly is bekend in ons systeem";
             break;
-          case "3":
+          case 3:
             text = "Mo is bekend in ons systeem";
             break;
-          case "4":
+          case 4:
             text = "Hendrik is bekend in ons systeem";
             break;
-          case "5":
+          case 5:
             text = "Tony is bekend in ons systeem";
             break;
-          case "6":
+          case 6:
             text = "Irus is bekend in ons systeem";
             break;
-          case "7":
+          case 7:
             text = "Jan is bekend in ons systeem";
             break;
-          case "8":
+          case 8:
             text = "Peter is bekend in ons systeem";
             break;
           default:
             text = "does not exist";
         }
         document.getElementById("answer").innerText = text;
+        console.log(r);
       }
 
-      function getRndInteger(min, max) {
-        return Math.round(Math.random() * (max - min + 1));
+      function r(min, max) {
+        return Math.floor(Math.random() * (max - min + 1));
       }
     </script>
   </body>
