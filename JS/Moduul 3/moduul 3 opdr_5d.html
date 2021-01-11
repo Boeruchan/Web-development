@@ -16,23 +16,24 @@ initial-scale=1.0"
     <button onclick="answer()">click</button>
 
     <script>
+      const voorNaam = [
+        "",
+        "John",
+        "Oly",
+        "Mo",
+        "Hendrik",
+        "Tony",
+        "Irus",
+        "Jan",
+        "Peter",
+      ];
+      const naamNumber = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
+
       function answer() {
         let nameInput = (document.getElementById(
           "naam"
-        ).innerHTML = getRndInteger(1, 8));
+        ).innerHTML = getRndInteger(1, 9));
         const answer = document.getElementById("answer");
-        const voorNaam = [
-          "",
-          "John",
-          "Oly",
-          "Mo",
-          "Hendrik",
-          "Tony",
-          "Irus",
-          "Jan",
-          "Peter",
-        ];
-        const naamNumber = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
 
         if (nameInput == naamNumber[0]) {
           answer.innerText = "Dit is een bekende van ons" + " " + voorNaam[0];
@@ -58,7 +59,7 @@ initial-scale=1.0"
       }
 
       function getRndInteger(min, max) {
-        return Math.floor(Math.random() * (max - min + 1));
+        return Math.round(Math.random() * (max - min + 1));
       }
 
       function both() {

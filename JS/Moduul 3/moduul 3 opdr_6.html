@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width,
+initial-scale=1.0"
+    />
+    <title>Functions</title>
+  </head>
+  <body>
+    <h1>Opdracht 6</h1>
+    <input type="naam" name="naam" id="naam" />
+    <p id="answer"></p>
+    <button onclick="answer()">click</button>
+
+    <script>
+      const a = [
+        "",
+        "John",
+        "Oly",
+        "Mo",
+        "Hendrik",
+        "Tony",
+        "Irus",
+        "Jan",
+        "Peter",
+      ];
+      const b = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
+
+      function answer() {
+        let nameInput = (document.getElementById(
+          "naam"
+        ).innerHTML = getRndInteger(1, 9));
+        const answer = document.getElementById("answer");
+
+        if (nameInput == b[0]) {
+          answer.innerText = "Dit is een bekende van ons" + " " + a[0];
+        } else if (nameInput == b[1]) {
+          answer.innerText = "Dit is een bekende van ons" + " " + a[1];
+        } else if (nameInput == b[2]) {
+          answer.innerText = "Dit is een bekende van ons" + " " + a[2];
+        } else if (nameInput == b[3]) {
+          answer.innerText = "Dit is een bekende van ons" + " " + a[3];
+        } else if (nameInput == b[4]) {
+          answer.innerText = "Dit is eenaam bekende van ons" + " " + a[4];
+        } else if (nameInput == b[5]) {
+          answer.innerText = "Dit is een bekende van ons" + " " + a[5];
+        } else if (nameInput == b[6]) {
+          answer.innerText = "Dit is een bekende van ons" + " " + a[6];
+        } else if (nameInput == b[7]) {
+          answer.innerText = "Dit is een bekende van ons" + " " + a[7];
+        } else if (nameInput == b[8]) {
+          answer.innerText = "Dit is een bekende van ons" + " " + a[8];
+        } else {
+          answer.innerText = "Onbekend in ons systeem!";
+        }
+      }
+
+      // function getRndInteger(min, max) {
+      //   return Math.round(Math.random() * (max - min + 1));
+      // }
+      getRndInteger = (min, max) => Math.round(Math.random() * (max - min + 1));
+    </script>
+  </body>
+</html>

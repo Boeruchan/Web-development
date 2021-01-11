@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width,
+initial-scale=1.0"
+    />
+    <title>Functions</title>
+  </head>
+  <body>
+    <h1>Opdracht 7</h1>
+
+    <p>
+      Hoe geef je 2 of meer parameters mee aan een functie? Geef een voorbeeld.
+    </p>
+    <pre>
+      const a = 1;
+      const b = 2;
+
+      const answer = (a, b) => a + b;
+      console.log(answer(a, 2));
+      // answer: 3
+    </pre>
+    <hr />
+    <p>Wat zijn rest parameters? Geef een voorbeeld.</p>
+    <pre>
+    const nums = (first, ...rest) => rest;
+    console.log(nums(1, 2, 3, 4));
+    // answer: [ 2, 3, 4 ]
+
+    const num = (first, second, ...rest) => rest;
+    console.log(num(1, 2, 3, 4));
+    // answer: [3, 4]
+  </pre
+    >
+    <hr />
+    <p>
+      Wat is het verschil tussen rest parameters en expliciete parameters die je
+      aangeeft bij een functie?
+    </p>
+
+    <h4>implicite (javascript convert uit zichzelf de datatype):</h4>
+    <pre>
+
+      const a = 1;
+      const b = 2;
+      const c = "2";
+
+      const answer = (a, b) => a + b;
+      console.log(answer(a, 2));
+      // answer: 3
+
+      const answer2 = (a, c) => a + c;
+      console.log(answer2(a, c));
+      // answer2 = 12
+      (a got converted to a string)
+
+      const answer3 = (a, c) => a * c;
+      console.log(answer3(a, c));
+      // anser3 = 2
+      (a got converted to a number)
+    </pre>
+
+    <hr />
+
+    <h4>explicite (programmeur beslist zelf wat voor datatype wordt) :</h4>
+    <p>
+      console.log(Number("3")); 2 got converted to a Number = 2<br />
+      <br />
+      console.log(String(3)); 2 got converted to a String = "2"<br />
+    </p>
+
+    <script>
+      const a = 1;
+      const b = 2;
+      const c = "2";
+
+      const answer = (a, b) => a + b;
+      console.log(answer(a, b));
+
+      const nums = (first, ...rest) => rest;
+      console.log(nums(1, 2, 3, 4));
+
+      const num = (first, second, ...rest) => rest;
+      console.log(num(1, 2, 3, 4));
+
+      const answer2 = (a, c) => a + c;
+      console.log(answer2(a, c));
+
+      const answer3 = (a, c) => a * c;
+      console.log(answer3(a, c));
+
+      console.log(Number("3"));
+
+      console.log(String(3));
+
+      // function getRndInteger(min, max) {
+      //   return Math.round(Math.random() * (max - min + 1));
+      // }
+      getRndInteger = (min, max) => Math.round(Math.random() * (max - min + 1));
+    </script>
+  </body>
+</html>

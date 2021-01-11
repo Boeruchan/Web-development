@@ -14,12 +14,20 @@ initial-scale=1.0"
     <p id="answer"></p>
     <button onclick="hello()">click</button>
     <script>
-      text = "this function says 'Hello World'";
-      const text2 = document.getElementById("answer");
+      // text = "this function says 'Hello World'";
+      // const text2 = document.getElementById("answer");
 
       function hello() {
-        text2.innerText = "Hello World!";
-        console.log(text);
+        text2();
+        text();
+      }
+
+      function text() {
+        console.log("this function says 'Hello World'");
+      }
+
+      function text2() {
+        console.log("hello World!");
       }
 
       // Plaats hieronder alle antwoorden van de opdrachten.

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width,
+initial-scale=1.0"
+    />
+    <title>Functions</title>
+  </head>
+  <body>
+    <h1>Opdracht 5</h1>
+    <input type="naam" name="naam" id="naam" />
+    <p id="answer"></p>
+    <button onclick="answer()">click</button>
+
+    <script>
+      function answer() {
+        let naamInput = document.getElementById("naam").value;
+
+        switch (naamInput) {
+          case "1":
+            text = "John is bekend in ons systeem";
+            break;
+          case "2":
+            text = "Oly is bekend in ons systeem";
+            break;
+          case "3":
+            text = "Mo is bekend in ons systeem";
+            break;
+          case "4":
+            text = "Hendrik is bekend in ons systeem";
+            break;
+          case "5":
+            text = "Tony is bekend in ons systeem";
+            break;
+          case "6":
+            text = "Irus is bekend in ons systeem";
+            break;
+          case "7":
+            text = "Jan is bekend in ons systeem";
+            break;
+          case "8":
+            text = "Peter is bekend in ons systeem";
+            break;
+          default:
+            text = "does not exist";
+        }
+        document.getElementById("answer").innerText = text;
+      }
+
+      function getRndInteger(min, max) {
+        return Math.round(Math.random() * (max - min + 1));
+      }
+    </script>
+  </body>
+</html>

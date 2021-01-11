@@ -14,13 +14,15 @@ initial-scale=1.0"
     <p id="answer"></p>
     <button onclick="answer()">click</button>
     <script>
-      let number = "1";
-      const message = document.getElementById("answer");
-
       function answer() {
-        message.innerText = "Hello World!";
-        console.log( message + number);
+        number(9);
+        console.log(number());
       }
+
+      function number(x) {
+        console.log(x);
+      }
+
       // Plaats hieronder alle antwoorden van de opdrachten.
     </script>
   </body>
