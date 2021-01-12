@@ -1,0 +1,65 @@
+
+
+        function answer() {
+            let data = randomInputName();
+            switch (data) {
+                case "Mo":
+                    naamCheck = "Dit is een bekende van ons:" + " " + data;
+                    break;
+                case "Piet":
+                    naamCheck = "Dit is een bekende van ons:" + " " + data;
+                    break;
+                case "Jan":
+                    naamCheck = "Dit is een bekende van ons:" + " " + data;
+                    break;
+                case "Arash":
+                    naamCheck = "Dit is een bekende van ons:" + " " + data;
+                    break;
+                default:
+                    naamCheck = "Dit is geen bekende van ons: ";
+                    break;
+            }
+            document.getElementById("melding").innerHTML = naamCheck;
+        }
+        function randomInputName() {
+            let data = document.getElementById("text").value;
+            const y = willekeurig();
+            switch (y) {
+                case 1:
+                    naamCheck = "John";
+                    break;
+                case 2:
+                    naamCheck = "Olly";
+                    break;
+                case 3:
+                    naamCheck = "Mo";
+                    break;
+                case 4:
+                    naamCheck = "Hendrik";
+                    break;
+                case 5:
+                    naamCheck = "Tony";
+                    break;
+                case 6:
+                    naamCheck = "Irus";
+                    break;
+                case 7:
+                    naamCheck = "Jan";
+                    break;
+                case 8:
+                    naamCheck = "Peter";
+                    break;
+                default:
+                    naamCheck = "";
+                    break;
+            }
+            //document.getElementById("melding").innerHTML = naamCheck;
+            return naamCheck;
+        }
+        function willekeurig() {
+            let x = Math.round(Math.random() * 10);
+            return x;
+            //console.log(x);
+        }
+    </script>
+</body>

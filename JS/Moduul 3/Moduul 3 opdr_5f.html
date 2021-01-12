@@ -16,85 +16,78 @@ initial-scale=1.0"
     <button onclick="answer()">click</button>
 
     <script>
-      // function answer() {
-      //   // let naamInput = document.getElementById("naam").value;
-      //   let naamInput = (document.getElementById(
-      //     "answer"
-      //   ).innerHTML = getRndInteger(1, 9));
-      //   console.log(naamInput);
-
-      //   switch (naamInput) {
-      //     case "1":
-      //       text = "John is bekend in ons systeem";
-      //       break;
-      //     case "2":
-      //       text = "Oly is bekend in ons systeem";
-      //       break;
-      //     case "3":
-      //       text = "Mo is bekend in ons systeem";
-      //       break;
-      //     case "4":
-      //       text = "Hendrik is bekend in ons systeem";
-      //       break;
-      //     case "5":
-      //       text = "Tony is bekend in ons systeem";
-      //       break;
-      //     case "6":
-      //       text = "Irus is bekend in ons systeem";
-      //       break;
-      //     case "7":
-      //       text = "Jan is bekend in ons systeem";
-      //       break;
-      //     case "8":
-      //       text = "Peter is bekend in ons systeem";
-      //       break;
-      //     default:
-      //       text = "does not exist";
-      //   }
-      //   document.getElementById("answer").innerText = text;
-      // }
-
-      // function getRndInteger(min, max) {
-      //   return Math.round(Math.random() * (max - min + 1));
-      // }
-
       function answer() {
-        // let naamInput = document.getElementById("naam").value;
+        let naamInput = rInput();
 
-        switch (r(1, 9)) {
-          case 1:
-            text = "John is bekend in ons systeem";
+        switch (naamInput) {
+          case "John":
+            text = "Is bekend in ons systeem" + " " + naamInput;
             break;
-          case 2:
-            text = "Oly is bekend in ons systeem";
+          case "Oly":
+            text = "Is bekend in ons systeem" + " " + naamInput;
             break;
-          case 3:
-            text = "Mo is bekend in ons systeem";
+          case "Mo":
+            text = "Is bekend in ons systeem" + " " + naamInput;
             break;
-          case 4:
-            text = "Hendrik is bekend in ons systeem";
+          case "Hendrik":
+            text = "Is bekend in ons systeem" + " " + naamInput;
             break;
-          case 5:
-            text = "Tony is bekend in ons systeem";
+          case "Tony":
+            text = "Is bekend in ons systeem" + " " + naamInput;
             break;
-          case 6:
-            text = "Irus is bekend in ons systeem";
+          case "Irus":
+            text = "Is bekend in ons systeem" + " " + naamInput;
             break;
-          case 7:
-            text = "Jan is bekend in ons systeem";
+          case "Jan":
+            text = "Is bekend in ons systeem" + " " + naamInput;
             break;
-          case 8:
-            text = "Peter is bekend in ons systeem";
+          case "Peter":
+            text = "Is bekend in ons systeem" + " " + naamInput;
             break;
           default:
             text = "does not exist";
         }
         document.getElementById("answer").innerText = text;
-        console.log(r);
       }
 
-      function r(min, max) {
-        return Math.floor(Math.random() * (max - min + 1));
+      function rInput() {
+        const b = random();
+
+        switch (b) {
+          case 1:
+            text = "John";
+            break;
+          case 2:
+            text = "Oly";
+            break;
+          case 3:
+            text = "Mo";
+            break;
+          case 4:
+            text = "Hendrik";
+            break;
+          case 5:
+            text = "Tony";
+            break;
+          case 6:
+            text = "Irus";
+            break;
+          case 7:
+            text = "Jan";
+            break;
+          case 8:
+            text = "Peter";
+            break;
+          default:
+            text = "does not exist";
+        }
+        return text;
+      }
+
+      function random() {
+        let a = Math.round(Math.random() * 10);
+        return a;
+        console.log(a);
       }
     </script>
   </body>

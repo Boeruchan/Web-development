@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Moduul 4</title>
+</head>
+<body>
+    <h1>Introductie</h1>
+    <p>Global scopes <br>
+        In a programming environment, the global scope is the scope that contains, and is visible in, all other scopes.
+        <br>
+        In client-side JavaScript, the global scope is generally the web page inside which all the code is being executed.
+    </p>
+
+    <pre>
+        <-script->
+            let test = 0; <-- global scopes (kan gebruikt worden in block scopes)
+
+            function blalbala() {
+                let test = "2"; <-- block scopes (kan niet gebruikt worden in global scopes)
+                console.log(tralalala); <-- block scopes
+            }
+
+            let test2 = 2; <--global scopes
+
+        <-/script=>
+    </pre>
+
+    <p>Block scopes<br>
+    <pre>{ a block scope here }</pre>
+    </p>
+
+    <hr>
+<h2>Opdracht 1</h2>
+    <pre>
+        function printCar() {
+            const carBrand = "Volvo";
+            }
+            console.log(carBrand);
+    </pre>
+   <p> Niets, want de carBrand variable zit niet in globalscope maar in blockscop.
+   <br>Wanneer je de console.log(carBrand) in blockscope zou plaatsen dan zou hij wel naar "Volo" kunnen printen. </p>
+
+    <pre>
+        function printCar() {
+            const carBrand = "Volvo";
+            console.log(carBrand);
+            }
+    </pre>
+
+    <hr>
+    <h2>Opdracht 2</h2>
+    <p>Wat wordt er in de console gelogt?</p>
+    <pre>
+    let carName;
+    function printCar() {
+    carBrand = "Volvo";
+    }
+    console.log(carBrand);
+</pre>
+<p>Er wordt niets geprint want console.log(carBrand) zit nog steeds in de blockscope en niet in de global scope.</p>
+<hr>
+<h2>Opdracht 3</h2>
+<p>Wat wordt er in de console gelogt?</p>
+<pre>
+    function printCar() {
+        carBrand = "Volvo";
+        }
+        printCar();
+        console.log(carBrand);
+</pre>
+<p>Volvo wordt geprint.<br>
+printcar(); <-- wordt nu gezien als variable en in de variable staat de block. Deze staan nu in global waardoor de console nu wel kan lezen in (carBrand)</p>
+
+<hr>
+
+<h2>Opdracht 4</h2>
+<pre>
+    function printCar() {
+        carBrand = "Volvo";
+        return function(type) {
+        console.log(carBrand + " " + type);
+        }
+        }
+        const car = printCar();
+        car("v40");
+</pre>
+
+    <button onclick="printCar()">click</button>
+    <script>
+    
+        //    function printCar() {
+        //     const carBrand = "Volvo";
+        //     }
+        //     console.log(carBrand);
+
+    //     Opdracht 2
+    //         let carName;
+    // function printCar() {
+    // carBrand = "Volvo";
+    // }
+    // console.log(carBrand);
+
+    // Opdracht 3
+//     function printCar() {
+//  carBrand = "Volvo";
+//  }
+//  printCar();
+//  console.log(carBrand);
+
+// Opdracht 4
+function printCar() {
+ carBrand = "Volvo";
+ return function(type) {
+ console.log(carBrand + " " + type);
+ }
+ }
+ const car = printCar();
+ car("v40");
+
+    </script>
+</body>
+</html>

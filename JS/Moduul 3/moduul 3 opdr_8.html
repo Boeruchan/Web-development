@@ -68,27 +68,27 @@
           </tr>
           <tr>
             <td>Willem</td>
-            <td><input type="number" class="wnum" onchange="color();" /></td>
+            <td><input type="number" id="wnum" onchange="color(this);" /></td>
           </tr>
           <tr>
             <td>Jan</td>
-            <td><input type="number" class="wnum" onchange="color();" /></td>
+            <td><input type="number" id="wnum" onchange="color(this);" /></td>
           </tr>
           <tr>
             <td>Kim Sing</td>
-            <td><input type="number" id="wnum" onchange="color();" /></td>
+            <td><input type="number" id="wnum" onchange="color(this);" /></td>
           </tr>
           <tr>
             <td>Samantha</td>
-            <td><input type="number" id="wnum" onchange="color();" /></td>
+            <td><input type="number" id="wnum" onchange="color(this);" /></td>
           </tr>
           <tr>
             <td>Joyce</td>
-            <td><input type="number" id="wnum" onchange="color();" /></td>
+            <td><input type="number" id="wnum" onchange="color(this);" /></td>
           </tr>
           <tr>
             <td>Gareth</td>
-            <td><input type="number" id="wnum" onchange="color();" /></td>
+            <td><input type="number" id="wnum" onchange="color(this);" /></td>
           </tr>
         </table>
       </div>
@@ -245,19 +245,30 @@
     <script>
 
 
-function color () {
-    const numInput = document.getElementById("wnum");
+function color(params) {
+    const numInput = document.getElementById("wnum").value;
 
-    if (numInput.value < 5.5 ) {
-        numInput.style.backgroundColor = "red";
-    } else if (numInput.value > 7.5) {
-        numInput.style.backgroundColor = "darkgreen";   
-    } else if (numInput.value > 5.5) {
-        numInput.style.backgroundColor = "green";
+    if (numInput < 5.5 ) {
+        params.style.backgroundColor = "red";
+        
+    } else if (numInput > 7.5) {
+       params.style.backgroundColor = "darkgreen";
+       
+    } else if (numInput > 5.5) {
+      params.style.backgroundColor = "green";
+    
     }
+    else {
+      return numInput=0 ;
+    }
+     
+    
+    console.log(params);
 }
 
 color();
+
+
 
     </script>
   </body>
