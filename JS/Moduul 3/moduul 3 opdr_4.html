@@ -14,22 +14,26 @@ initial-scale=1.0"
     <p id="answer"></p>
     <button onclick="answer()">click</button>
     <script>
-
-      
-function answer() {
-        nummer(10, 5);
+      function answer() {
+        const a = nummer(10, 5);
+        console.log(a);
       }
-      
+
       function nummer(a, b) {
-        console.log(a * b);
+        return a * b;
       }
 
+      // Ander manier die ik evt zou kunnen maken.
+      //       function answer() {
+      //         // nummer(10, 5);
+      //         const uitkomst = nummer(10, 5);
+      //         console.log(uitkomst);
+      //       }
 
-      // function number(a) {
-      //   console.log(a);
-      // }
+      //       function nummer(a, b) {
+      //         return a * b;
 
-      // Plaats hieronder alle antwoorden van de opdrachten.
+      //       }
     </script>
   </body>
 </html>

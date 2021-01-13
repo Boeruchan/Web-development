@@ -86,6 +86,10 @@ printcar(); <-- wordt nu gezien als variable en in de variable staat de block. D
         const car = printCar();
         car("v40");
 </pre>
+<p>This function works by using lexical enviremont {{}} and closure
+    . In this case the car is a reference to the instance of the function name printCar();
+    For this reason, when printCar is invoked, the variable car remeains availabe for use.
+</p>
 
     <button onclick="printCar()">click</button>
     <script>

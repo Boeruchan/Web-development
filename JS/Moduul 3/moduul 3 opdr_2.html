@@ -18,17 +18,20 @@ initial-scale=1.0"
       // const text2 = document.getElementById("answer");
 
       function hello() {
-        text2();
-        text();
+        a = text2("this function says");
+        b = text("hello World!");
+        console.log(a, b);
       }
 
-      function text() {
-        console.log("this function says 'Hello World'");
+      function text(a) {
+        return a;
       }
 
-      function text2() {
-        console.log("hello World!");
+      function text2(b) {
+    return b;
       }
+
+      
 
       // Plaats hieronder alle antwoorden van de opdrachten.
     </script>
