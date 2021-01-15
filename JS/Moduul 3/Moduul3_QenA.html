@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Q&A opdracht 8</title>
+  </head>
+  <style>
+    table,
+    th,
+    td {
+      border: 1px solid black;
+      text-align: center;
+      margin: 10px;
+    }
+
+    h3 {
+      text-align: center;
+    }
+
+    .box {
+      display: flex;
+      width: auto;
+    }
+  </style>
+  <body>
+    <!-- 
+    Stap 1 = wiskunde tabel maken + gegevens invoeren.
+    Stap 2 = functie maken om cijfers op te halen van tabel wiskunde.
+    Stap 3 = natuurkunde tabel maken + gegevens invoeren.
+    Stap 4 = functie maken cijfers op te halen van tabel natuurkunde.
+    Stap 5 = Beta tabel maken + gegevens invoeren ( alleen de namen).
+    Stap 6 = functie maken om de gemiddelde cijfer te berekenen en weer te geven in de betavakken tabel.
+             (het gaat om de cijfers wiskunde en natuurkunde)
+    Stap 7 = Copy paste voor Nederlands en Engels tabellen + functie.
+    Stap 8 = (er zijn twee manieren.)
+             ~ functie maken met conditie om de kleuren aan te passen.
+             ~ alleen de condities te schrijven in de functie van de tabellen.
+    Stap 9 = Functie schrijven om nummer te veranderen.
+ -->
+
+    <div class="box">
+      <!-- wiskunde tabel -->
+      <table>
+        <tr>
+          <th colspan="2">
+            <h3>Wiskunde</h3>
+          </th>
+        </tr>
+        <tr>
+          <th><span>Naam</span></th>
+          <th><span>Cijfer</span></th>
+        </tr>
+        <tr>
+          <td><span>Willem</span></td>
+          <td id="wiskunde[1]" onclick="veranderCijfer(this)"><span>5</span></td>
+        </tr>
+        <tr>
+          <td><span>Jan</span></td>
+          <td id="wiskunde[2]"><span>8</span></td>
+        </tr>
+        <tr>
+          <td><span>Kim Sing</span></td>
+          <td id="wiskunde[3]"><span>9</span></td>
+        </tr>
+        <tr>
+          <td><span>Samantha</span></td>
+          <td id="wiskunde[4]"><span>2</span></td>
+        </tr>
+        <tr>
+          <td><span>Joyce</span></td>
+          <td id="wiskunde[5]"><span>6</span></td>
+        </tr>
+        <tr>
+          <td><span>Gareth</span></td>
+          <td id="wiskunde[6]"><span>5</span></td>
+        </tr>
+      </table>
+
+      <!-- Natuurkunde tabel -->
+      <table>
+        <tr>
+          <th colspan="2">
+            <h3>Natuurkunde</h3>
+          </th>
+        </tr>
+        <tr>
+          <th><span>Naam</span></th>
+          <th><span>Cijfer</span></th>
+        </tr>
+        <tr>
+          <td><span>Willem</span></td>
+          <td id="natuurkunde[1]" onclick="veranderCijfer(this)"><span>3</span></td>
+        </tr>
+        <tr>
+          <td><span>Jan</span></td>
+          <td><span>7</span></td>
+        </tr>
+        <tr>
+          <td><span>Kim Sing</span></td>
+          <td><span>6</span></td>
+        </tr>
+        <tr>
+          <td><span>Samantha</span></td>
+          <td><span>9</span></td>
+        </tr>
+        <tr>
+          <td><span>Joyce</span></td>
+          <td><span>2</span></td>
+        </tr>
+        <tr>
+          <td><span>Gareth</span></td>
+          <td><span>8</span></td>
+        </tr>
+      </table>
+    </div>
+
+    <!-- Beta tabel -->
+    <table>
+      <tr>
+        <th colspan="2">
+          <h3>Beta vakken</h3>
+        </th>
+      </tr>
+      <tr>
+        <th><span>Naam</span></th>
+        <th><span>Cijfer</span></th>
+      </tr>
+      <tr>
+        <td><span>Willem</span></td>
+        <td id="resultaat[1]"><span></span></td>
+      </tr>
+      <tr>
+        <td><span>Jan</span></td>
+        <td><span></span></td>
+      </tr>
+      <tr>
+        <td><span>Kim Sing</span></td>
+        <td><span></span></td>
+      </tr>
+      <tr>
+        <td><span>Samantha</span></td>
+        <td><span></span></td>
+      </tr>
+      <tr>
+        <td><span>Joyce</span></td>
+        <td><span></span></td>
+      </tr>
+      <tr>
+        <td><span>Gareth</span></td>
+        <td><span></span></td>
+      </tr>
+    </table>
+
+    <script>
+      const willemResultaat = () => {
+        const willemWisCijfer = document.getElementById("wiskunde[1]");
+        const willemNatCijfer = document.getElementById("natuurkunde[1]");
+        const wiskundeCijfer = parseInt(willemWisCijfer.querySelector("span").innerHTML);
+        const natuurkundeCijfer = parseInt(willemNatCijfer.querySelector("span").innerHTML);
+        const willemResultaat = document.getElementById("resultaat[1]");
+        const willem = "willem";
+        let betavakken = (wiskundeCijfer + natuurkundeCijfer) / 2;
+        willemResultaat.innerHTML = betavakken;
+        console.log(wiskundeCijfer);
+        console.log(natuurkundeCijfer);
+        kleurenVeranderen(wiskundeCijfer, willemWisCijfer);
+      }
+
+      const veranderCijfer = (obj) => {
+        let cijfer = parseInt(obj.querySelector("span").innerHTML);
+        let updateCijfer = prompt("Wat is de nieuwe cijfer?", cijfer);
+        obj.querySelector("span").innerHTML = updateCijfer;
+        console.log(cijfer);
+      }
+
+      const kleurenVeranderen = (cijfer1, persoon1) => {
+        if (cijfer1 < 6.5 ) {
+          persoon1.style.backgroundColor = "red";
+        } else {
+          persoon1.style.backgroundColor = "blue";
+        }
+      }
+
+
+      willemResultaat();
+      
+
+
+
+
+
+  
+    </script>
+  </body>
+</html>
