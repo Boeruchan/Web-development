@@ -1,17 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Loops</title>
-</head>
-<body>
+  </head>
+  <body>
     <h1>Opdracht 9</h1>
-    
-    <script>
-      const getallen = [2,7,5,10,4,9,3,1,8,6];
-       
 
+    <script>
+      // const getallen = [2, 7, 5, 10, 4, 9, 3, 1, 8, 6];
+
+      let bubbleSort = (arr) => {
+        //length of the array
+        let a = arr.length;
+
+        for (let i = 0; i < a - 1; i++) {
+          for (let j = 0; j <= a - i - 1; j++) {
+            //swap the numbers
+          if(arr[j] > arr[j+1]) {
+            [arr[j], arr[j+1]] = [arr[j+1], arr[j]];
+
+          }         }
+        }
+        return arr;
+      }
+      console.log(bubbleSort([2, 7, 5, 10, 4, 9, 3, 1, 8, 6]));
+ 
     </script>
-</body>
+  </body>
 </html>

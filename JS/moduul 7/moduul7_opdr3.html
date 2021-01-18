@@ -1,0 +1,43 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width,
+initial-scale=1.0"
+    />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="clubs" class="clubs"></div>
+    <script>
+      // start assignments
+      // Maak een Object die club informatie bijhoudt:
+      // stap 1 ● Naam van de club
+      // stap 2 ● Type sport
+      // stap 3 ● Aantal leden
+
+      // Naam van de club: Sportclub
+      // Type sport: voetbal, korfbal, basketbal, balbal
+      // Aantal leden: jan, piet, karen, cindy, pim
+
+      //   opdracht 1 objects.
+      const info = {
+        club: "Sportclub",
+        leden: "Jan",
+        adres: "feijnoordstraat 200",
+        telnum: "06-43326789",
+        contactp: "mama",
+        sport: [
+          { sport1: "voetbal" },
+          { sport2: "balbal" },
+          { sport3: "basketbal" },
+        ],
+      };
+
+      for (let i = 0; i < info.sport.length; i++) {
+        console.log(info.sport[i]);
+      }
+    </script>
+  </body>
+</html>
