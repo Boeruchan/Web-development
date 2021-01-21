@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Opdracht 5</h1>
+    <!-- In addition to creating objects using a constructor function, you can create objects using an object initializer. Using object initializers is sometimes referred to as creating objects with literal notation. “Object initializer” is consistent with the terminology used by C++. -->
+    <script>
+      //Opdracht 4
+      //   const Person = function (name, age) {
+      //     this.name = name;
+      //     this.age = age;
+      //   };
+
+      //   const persons = [
+      //     new Person("Jan", 24),
+      //     new Person("Klaas", 15),
+      //     new Person("Yanis", 42),
+      //     new Person("Rupel", 55),
+      //     new Person("Hendrik", 32),
+      //     new Person("Mono", 28),
+      //     new Person("West", 23),
+      //   ];
+
+      // const sorted = persons.sort(function(firstPersons, secondPersons) {
+      //   if (firstPersons.age < secondPersons.age) return -1;
+      //   if (firstPersons.age > secondPersons.age) return 1;
+      //   return 0;
+      // });
+      // console.log(sorted);
+
+      //------------------------------------
+
+      //   opdracht 5, Object initializers
+      //aak nu een Person object door gebruik te maken van Object initializers.
+      //   const persons = { name: "Jan", age: 24 };
+      //   const persons_1 = { name: "Klaas", age: 15 };
+      //   const persons_2 = { name: "Yanis", age: 42 };
+
+      //   console.log(persons.name + " " + persons.age);
+      //   console.log(persons_1.name + " " + persons_1.age);
+      //   console.log(persons_2.name + " " + persons_2.age);
+
+      //   Wat zou eventueel de voor en nadelen t.o.v Object constructors?
+      const Car = function (model, year, owner) {
+        this.model = model;
+        this.year = year;
+        this.owner = owner;
+      };
+
+      let mycar = new Car("volvo", 1850);
+      let klcar = new Car("BMW", 2030);
+      let yacar = new Car("kever", 1000);
+
+      const Person = function (name, age) {
+        this.name = name;
+        this.age = age;
+      };
+
+      let jan = new Person("Jan", 24);
+      let klaas = new Person("Klaas", 15);
+      let yanis = new Person("Yanis", 42);
+
+      let car1 = new Car("mazda", 2000, jan);
+      let car2 = new Car("koek", 4500, klaas);
+      let car3 = new Car("olifant", 2200, yanis);
+
+      console.log(car1);
+      console.log(car1.owner.name);
+      console.log(car1.owner.age);
+
+      //voordelen van object contructors is dat je makkelijker objects erbij kan toevoegen.
+      //nadelen van object contructors is dat je je veel schrijfwerk heb.
+    </script>
+  </body>
+</html>

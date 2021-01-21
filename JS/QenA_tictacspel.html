@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tic Tac Toe</title>
+    <script src="tictactoe.js"> </script>
+    <style>
+        .board {
+            display: flex;
+            flex-wrap: wrap;
+            width: 900px;
+            border: 1px solid black;
+        }
+
+        .box {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 300px;
+            height: 300px;
+            font-size: 72px;
+            border: 1px solid black;
+            box-sizing: border-box; 
+        }
+    </style>
+</head>
+<body>
+<!-- Plan van aanpak
+- Maak een speelbare spel voor Tic Tac Toe.
+- Visuele gedeelte via html en css maken.
+- hoveel boxen? 9 boxen
+- styling board + box
+- nu moeten we voor elkaar krijgen dat het een optie krijgt dat je bij het klikken een event komt van de gebruiker
+- js script tijd voor functie dat bij onclick een x op de webbrowser komt te staan
+- richten op x - layout stylen in css. Je wilt x groter en op het center zetten in de box.
+- Nu laat je de rest van de boxen werken. ( copy past en id + play() nummer veranderen)
+- Nu scripten met status van het spel wie aan zet is. in Js objects aanmaken en in function if en else maken.
+- Hoe bepaal je nu dat de speler heeft gewonnen.
+-  (9 vakken en elk vak heeft een id) <-- aangeven welke conditie je nodig hebt om te winnen.
+
+-->
+<div class="board">
+    <div id="1" class="box" onclick="play(1)"></div>
+    <div id="2" class="box" onclick="play(2)"></div>
+    <div id="3" class="box" onclick="play(3)"></div>
+    <div id="4" class="box" onclick="play(4)"></div>
+    <div id="5" class="box" onclick="play(5)"></div>
+    <div id="6" class="box" onclick="play(6)"></div>
+    <div id="7" class="box" onclick="play(7)"></div>
+    <div id="8" class="box" onclick="play(8)"></div>
+    <div id="9" class="box" onclick="play(9)"></div>
+</div>
+<button onclick()="reset()">clear</button>
+</body>
+</html>

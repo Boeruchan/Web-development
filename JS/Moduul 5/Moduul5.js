@@ -71,50 +71,50 @@ function mathRandom() {
     // opdracht 6
     // door the pushen is er nu in het rijtje mango bij gekomen.
     
-    fruit.push("mango");
-    console.log(fruit);
+   //  fruit.push("mango");
+   //  console.log(fruit);
 
-    // Door the pop() verwijder je de laatste element in array.
-    fruit.pop();
-    console.log(fruit);
+   //  // Door the pop() verwijder je de laatste element in array.
+   //  fruit.pop();
+   //  console.log(fruit);
 
-    // Door shift() verwijder je het eerste element in array.
-    fruit.shift();
-    console.log(fruit);
+   //  // Door shift() verwijder je het eerste element in array.
+   //  fruit.shift();
+   //  console.log(fruit);
 
-    // door slice() te gebruiken kan je specifieke elementen gebruiken in de array.
-    let twee = fruit.slice(2, 4);
-    console.log(twee);
+   //  // door slice() te gebruiken kan je specifieke elementen gebruiken in de array.
+   //  let twee = fruit.slice(2, 4);
+   //  console.log(twee);
 
-    // door splice() te gebruiken kun je elementen toevoegen of specifieke elementen weg halen.
-    fruit.splice(1, 0, "kip", "patat"); 
-    console.log(fruit);
+   //  // door splice() te gebruiken kun je elementen toevoegen of specifieke elementen weg halen.
+   //  fruit.splice(1, 0, "kip", "patat"); 
+   //  console.log(fruit);
 
-    // The sort() method sorts the items of an array.
-    // The sort order can be either alphabetic or numeric, and either ascending (up) or descending (down).
-    // By default, the sort() method sorts the values as strings in alphabetical and ascending order. 
-    // This works well for strings ("Apple" comes before "Banana"). However, if numbers are sorted as strings, "25" is bigger than "100", because "2" is bigger than "1". 
-    // Because of this, the sort() method will produce an incorrect result when sorting numbers.
-    // You can fix this by providing a "compare function" 
-    fruit.sort();
-    console.log(fruit);
+   //  // The sort() method sorts the items of an array.
+   //  // The sort order can be either alphabetic or numeric, and either ascending (up) or descending (down).
+   //  // By default, the sort() method sorts the values as strings in alphabetical and ascending order. 
+   //  // This works well for strings ("Apple" comes before "Banana"). However, if numbers are sorted as strings, "25" is bigger than "100", because "2" is bigger than "1". 
+   //  // Because of this, the sort() method will produce an incorrect result when sorting numbers.
+   //  // You can fix this by providing a "compare function" 
+   //  fruit.sort();
+   //  console.log(fruit);
 
-    numbers.sort();
-    console.log(numbers);
-    // 1, ?????10????, 2, 3, 4, 5
+   //  numbers.sort();
+   //  console.log(numbers);
+   //  // 1, ?????10????, 2, 3, 4, 5
 
-    // opdracht 7
-    console.log(fruit.length);
+   //  // opdracht 7
+   //  console.log(fruit.length);
 
-    // opdracht 8
-    const index = fruit.indexOf("peer")
-    fruit[index] = "Sinaasappel"
-    console.log(fruit);
+   //  // opdracht 8
+   //  const index = fruit.indexOf("peer")
+   //  fruit[index] = "Sinaasappel"
+   //  console.log(fruit);
 
-    // opdracht 9
-    const  wissel = fruit[0];
-    fruit[0] = fruit[4];
-    fruit[4] = wissel;
-    console.log(fruit);
+   //  // opdracht 9
+   //  const  wissel = fruit[0];
+   //  fruit[0] = fruit[4];
+   //  fruit[4] = wissel;
+   //  console.log(fruit);
 
 
