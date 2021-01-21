@@ -1,92 +1,23 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Moduul 7 Objects</title>
+    <title>Rock Paper Scissors Game!</title>
+    <link rel="stylesheet" href="style.css" />
   </head>
-  <style>
-    .board {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      width: 800px;
-      height: 400px;
-      border: 1px solid black;
-    }
 
-    .box {
-      border: 1px solid red;
-      width: 300px;
-      height: 100px;
-      margin: 20px;
-    }
-
-    button {
-      margin: 10px;
-    }
-
-    p {
-      text-align: center;
-    }
-  </style>
   <body>
-    <h1>Opdracht 7</h1>
-    <h2>Rock, Paper and Scissor game</h2>
-    <!-- Stappenplan rock paper and Scissor 
-       -  Maak een speelbare spel voor rock paper and scissor. 1 speler, 1 computer.
-       - visuele gedeelte html/css maken.
-       - 2 grote boxen waarin je plaatjes  krijgt van rock, paper of scissor krijgt.
-       - 3 kleine boxen waar je onclick doet op het plaatje rock, paper of scisoor.
-       - bij winnen prompt = "you won"
-       - bij verliezen prompt =  "you lose"
-       - bij draw pormpt = "Draw"
-       - Reset
-     -->
+    <h1>Computer's Choice</h1>
+    <h2 id="compChoice">?</h2>
+    <h1>User's Choice</h1>
+    <h2 id="userChoice">?</h2>
+    <h1>Final Result:</h1>
+    <h2 id="result">?</h2>
 
-    <div class="board">
-      <!-- first section: hier zie je de uitkomst van onclick en computer -->
-      <div class="box">
-        <button id="1" onclick="myChoose(1)">Rock</button>
-        <button id="2" onclick="myChoose(2)">Paper</button>
-        <button id="3" onclick="myChoose(3)">Scissor</button>
-        <p id="demo"></p>
-      </div>
-      <div class="box"></div>
-    </div>
+    <button class="choices" id="rock">Rock</button>
+    <button class="choices" id="paper">Paper</button>
+    <button class="choices" id="scissors">Scissors</button>
+    <button onclick="reset()" id="reset">Reset</button>
 
-    <script>
-        //  function voor wanneer je klik op button dat dat je keuze is.
-        function myChoose(btnChoose) {
-            // const btnRock = document.getElementById("demo").innerHTML = "Rock";
-            // const btnPaper = document.getElementById("demo").innerHTML = "Paper";
-            // const btnScissor = document.getElementById("demo").innerHTML = "Scissor";
-
-        if (choise1 === "paper" {
-          if (choise2 === "rock") {
-            return "paper wins";
-          } else {
-            if 
-          }
-        }
-
-        }
-   
-     
-
-// if (btnChoose == btnRock) {
-//   const btnRock = document.getElementById("demo").innerHTML = "Rock";
-// }
-// else if (btnChoose == btnPaper){
-//   const btnPaper = document.getElementById("demo").innerHTML = "Paper";
-// }
-// else if (btnChoose == btnScissor) {
-//   const btnScissor = document.getElementById("demo").innerHTML = "Scissor";
-// }
-// else {
-//   return (myChoose);
-// }
-
-    </script>
+    <script src="game.js"></script>
   </body>
 </html>
