@@ -28,16 +28,20 @@ initial-scale=1.0"
         adres: "feijnoordstraat 200",
         telnum: "06-43326789",
         contactp: "mama",
-        sport: [
-          { sport1: "voetbal" },
-          { sport2: "balbal" },
-          { sport3: "basketbal" },
-        ],
+        sport: "bal"
       };
 
-      for (let i = 0; i < info.sport.length; i++) {
-        console.log(info.sport[i]);
-      }
+      const addsport = {sport1: "voetbal",  sport2: "balbal", sport3: "basketbal"  }
+
+      Object.assign(info, addsport);
+      console.log(info);
+
+
+      let schildpad = {schild1: "ichigo", schild2: "Chippie"};
+      let nieuw = {schild3: "pom"};
+      Object.assign(schildpad, nieuw);
+      console.log(schildpad);
+      
     </script>
   </body>
 </html>

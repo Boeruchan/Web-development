@@ -68,11 +68,11 @@
           </tr>
           <tr>
             <td>Willem</td>
-            <td><input type="number" id="wnum" onchange="color(this);" /></td>
+            <td><input type="number" class="gradewis" value="1" oninput="checkValue(this)" /></td>
           </tr>
           <tr>
             <td>Jan</td>
-            <td><input type="number" id="wnum" onchange="color(this);" /></td>
+            <td><input type="number" class="gradewis"  value="8" oninput="checkValue(this)" /></td>
           </tr>
           <tr>
             <td>Kim Sing</td>
@@ -101,11 +101,11 @@
             </tr>
             <tr>
               <td>Willem</td>
-              <td><input type="number" id="nanum" onchange="color();" /></td>
+              <td><input type="number" class="gradenat" value="6" oninput="checkValue(this)" /></td>
             </tr>
             <tr>
               <td>Jan</td>
-              <td><input type="number" id="nanum" onchange="color();" /></td>
+              <td><input type="number" class="gradenat" value="5.5" oninput="checkValue(this)" /></td>
             </tr>
             <tr>
               <td>Kim Sing</td>
@@ -205,15 +205,16 @@
                       </tr>
                       <tr>
                         <td>Willem</td>
-                        <td><span id="gtaal" onchange="color2();"></span></td>
-                        <td><span id="gbeta" onchange="color2();"></span></td>
-                        <td><span id="klas" onchange="color2();"></span></td>
+                        <td class="grade talen"></td>
+                        <td class="grade beta"></div></td>
+                        <td class="grade combo"></div></td>
+                        
                       </tr>
                       <tr>
                         <td>Jan</td>
-                        <td><span id="gtaal" onchange="color2();"></span></td>
-                        <td><span id="gbeta" onchange="color2();"></span></td>
-                        <td><span id="klas" onchange="color2();"></span></td>
+                        <td class="grade beta"/></td>
+                        <td class="grade talen"/></td>
+                        <td class="grade combo"/></td>
                       </tr>
                       <tr>
                         <td>Kim Sing</td>
@@ -242,32 +243,107 @@
                     </table>
               </div>
           </div>
+
     <script>
+      // stap 1 check function dat de waarde is wat we willen veranderen
+// function checkValue(obj) {
+// // stap 1 check function obj
+//   console.log(obj);
+//   // stap 2 check obj.value
+//   console.log(obj.value);
+  
+// }
 
+// stap 4 zie console.log zodat je array maakt
+let gradeArray = document.getElementsByClassName('grade');
+let wisArray = document.getElementsByClassName('gradewis');
+let natArray = document.getElementsByClassName('gradenat');
+let enArray = document.getElementsByClassName('gradeeng');
+let nedArray = document.getElementsByClassName('gradened');
+let talenArray = document.getElementsByClassName('talen');
+let betaArray = document.getElementsByClassName('beta');
+let comboArray = document.getElementsByClassName('combo');
 
-function color(params) {
-    const numInput = document.getElementById("wnum").value;
+console.log(wisArray);
+console.log(natArray);
 
-    if (numInput < 5.5 ) {
-        params.style.backgroundColor = "red";
-        
-    } else if (numInput > 7.5) {
-       params.style.backgroundColor = "darkgreen";
-       
-    } else if (numInput > 5.5) {
-      params.style.backgroundColor = "green";
-    
-    }
-    else {
-      return numInput=0 ;
-    }
-     
-    
-    console.log(params);
+//stap 5 combi maken van wis en nat naar beta.value.
+function init() {
+  for(i=0; i < gradeArray.length; i++) {
+    betaArray[i].innerText = (Number(wisArray[i].value) + Number(natArray[i].value)) / 2;
+    talenArray[i].innerText = (Number(enArray[i].value) + Number(nedArray[i].value)) / 2;
+  }
+  // 5.1 check of de variables werkt
+  // console.log(wisArray[0]);
+  // console.log(natArray[0]);
+  // console.log(nedArray[0]);
+  // console.log(entArray[0]);
+
+  // console.log(betaArray[0].value);
+  // console.log(talenArray[0].value);
+  // console.log(comboArray[0].value);
+
+  // 5.2 dit is voor Alleen willem
+  // for(i=0; i < wisArray.length; i++) {
+  //   betaArray[0].innerText = (Number(wisArray[0].value) + Number(natArray[0].value)) / 2;
+  //   talenArray[0].innerText = (Number(enArray[0].value) + Number(nedArray[0].value)) / 2;
+  // }
+  checkInit();
 }
 
-color();
+// 6 Dit is een loop voor iedereen
+function checkInit(){
 
+}
+init();
+
+// // stap 2 psuedo kleuren in console toepassen
+// function checkValue(obj) {
+//   // stap 2.1 we willen psuedo kleur toepassen
+//   console.log(obj.value);
+// if () {
+//   //kleur rood
+// } else if () {
+// // kleur groen
+// } else {
+// // kleur donker groen
+// }  
+// }
+
+// stap 2.b toepassen kleuren
+// function checkValue(obj) {
+//   // stap 2.1 we willen psuedo kleur toepassen
+//   console.log(obj.value);
+// if (obj.value <= 5.5) {
+//   console.log("rood");
+//   //kleur rood
+// } else if (obj.value < 8) {
+//   console.log("groen");
+// // kleur groen
+// } else {
+//   console.log("donkergroen")
+// // kleur donker groen
+// }  
+// }
+
+// stap 3 kleuren toepassen in html webbrowser
+function checkValue(obj) {
+  // stap 2.1 we willen psuedo kleur toepassen
+  console.log(obj.value);
+if (obj.value <= 5.5) {
+  obj.style.backgroundColor = "red";
+  console.log("rood");
+  //kleur rood in inputfield
+} else if (obj.value < 8) {
+  console.log("groen");
+  obj.style.backgroundColor = "lightgreen";
+// kleur groen in inputfield
+} else {
+  obj.style.backgroundColor = "green";
+  console.log("donkergroen")
+// kleur donker groen in inputfield
+}  
+}
 
 
     </script>
