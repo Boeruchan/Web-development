@@ -1,0 +1,59 @@
+/* stappenplan CSS
+font: arial?
+calcboven: bg donkergrijs, bordertop-radius 25 rounded
+calconder; bg zwart, margin 10px?
+buttons: kleur -> lichtgrijs, geel, dondergrijs.
+         text kleur - zwart behalve bij bg geel en groter lettertype.
+         vorm: circle
+         cijfer 0 heeft andere widht
+*/
+
+.calcboven {
+  background-color: rgb(62, 62, 65);
+  width: 375px;
+  height: 90px;
+  padding-top: 30px;
+  padding-right: 20px;
+  border-top-left-radius: 25px;
+  border-top-right-radius: 25px;
+  text-align: right;
+}
+
+span {
+  font-size: 50px;
+  color: white;
+}
+
+.calconder {
+  background-color: black;
+  width: 375px;
+  height: 460px;
+  padding: 10px;
+}
+
+.btn {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  border: none;
+  margin: 5px;
+  font-size: 20px;
+}
+
+.btnlong {
+  width: 172px;
+  border-radius: 50px;
+  margin: 5px;
+}
+
+.btngrey {
+  background-color: rgb(190, 190, 190);
+}
+
+.btnyellow {
+  background-color: rgb(238, 184, 6);
+  color: white;
+}
+.btndgrey {
+  background-color: rgb(117, 117, 117);
+}

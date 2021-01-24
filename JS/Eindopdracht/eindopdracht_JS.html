@@ -3,6 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
     <title>Eindopdracht JS</title>
   </head>
   <body>
@@ -17,8 +18,41 @@
    van rij 2 t/m 5, eerste 3 knoppen: 7, 8, 9, 4, 5, 6, 1, 2, 3, 0, . || background-color grey || text-color: black
    ! nummer 0 bestaat uit 2 collommen met afgeronde hoeken.
    laatste kolom: /, x, -, + ,= || background-color: yellow. || text-color: white
-
-
  -->
+
+    <div class="calcboven">
+      <span id="totaal">0</span>
+    </div>
+    <div class="calconder">
+      <div>
+        <button type="number" class="btn btngrey row1_1" onclick="click()">AC</button>
+        <button type="number" class="btn btngrey row1_2" onclick="click()">+/-</button>
+        <button type="number" class="btn btngrey row1_3" onclick="click()">%</button>
+        <button type="number" class="btn btnyellow row1_4" onclick="click()">/</button>
+      </div>
+      <div>
+        <button type="number" class="btn btndgrey row2_1" onclick="click()">7</button>
+        <button type="number" class="btn btndgrey row2_2" onclick="click()">8</button>
+        <button type="number" class="btn btndgrey row2_3" onclick="click()">9</button>
+        <button type="number" class="btn btnyellow row2_4" onclick="click()">*</button>
+      </div>
+      <div>
+        <button type="number" class="btn btndgrey row2_1" onclick="click()">4</button>
+        <button type="number" class="btn btndgrey row2_2" onclick="click()">5</button>
+        <button type="number" class="btn btndgrey row2_3" onclick="click()">6</button>
+        <button type="number" class="btn btnyellow row2_4" onclick="click()">-</button>
+      </div>
+      <div>
+        <button type="number" class="btn btndgrey row3_1" onclick="click()">1</button>
+        <button type="number" class="btn btndgrey row3_2" onclick="click()">2</button>
+        <button type="number" class="btn btndgrey row3_3" onclick="click()">3</button>
+        <button type="number" class="btn btnyellow row3_4" onclick="click()">+</button>
+      </div>
+      <div>
+        <button type="number" class="btn btnlong btndgrey row5_1" onclick="click()">0</button>
+        <button type="number" class="btn btndgrey row5_3" onclick="click()">.</button>
+        <button type="number" class="btn btnyellow row5_4" onclick="click()">=</button>
+      </div>
+    </div>
   </body>
 </html>
