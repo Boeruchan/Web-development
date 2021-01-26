@@ -17,6 +17,7 @@ buttons: kleur -> lichtgrijs, geel, dondergrijs.
   border-top-left-radius: 25px;
   border-top-right-radius: 25px;
   overflow-wrap: break-word;
+  white-space: pre-line;
   text-align: right;
   font-size: 50px;
   color: white;

@@ -58,28 +58,29 @@
     <div class="calcboven" id="output"></div>
     <div class="calconder">
       <div>
-        <input type="button" class="btn btngrey" value="AC" onclick="myOperators(this.value)" />
-        <input type="button" class="btn btngrey" value="=/-" onclick="myOperators(this.value)" />
-        <input type="button" class="btn btngrey" value="%" onclick="myOperators(this.value)" />
-        <input type="button" class="btn btnyellow" value="/" onclick="myOperators(this.value)" />
+        <input type="button" class="btn btngrey" value="AC" onclick="myFunction(this.value)" />
+        <input type="button" class="btn btngrey" value="=/-" onclick="myFunction(this.value)" />
+        <input type="button" class="btn btngrey" value="%" onclick="myFunction(this.value)" />
+        <input type="button" class="btn btnyellow" value="/" onclick="myFunction(this.value)" />
       </div>
       <div>
         <input type="button" class="btn btndgrey" value="7" onclick="myFunction(this.value)" />
         <input type="button" class="btn btndgrey" value="8" onclick="myFunction(this.value)" />
         <input type="button" class="btn btndgrey" value="9" onclick="myFunction(this.value)" />
-        <input type="button" class="btn btnyellow" value="*" onclick="myOperators(this.value)" />
+        <input type="button" class="btn btnyellow" value="*" onclick="myFunction(this.value)" />
       </div>
       <div>
         <input type="button" class="btn btndgrey" value="4" onclick="myFunction(this.value)" />
         <input type="button" class="btn btndgrey" value="5" onclick="myFunction(this.value)" />
         <input type="button" class="btn btndgrey" value="6" onclick="myFunction(this.value)" />
-        <input type="button" class="btn btnyellow" value="-" onclick="myOperators(this.value)" />
+        <input type="button" class="btn btnyellow" value="-" onclick="myFunction(this.value)" />
       </div>
       <div>
         <input type="button" class="btn btndgrey" value="1" onclick="myFunction(this.value)" />
         <input type="button" class="btn btndgrey" value="2" onclick="myFunction(this.value)" />
         <input type="button" class="btn btndgrey" value="3" onclick="myFunction(this.value)" />
-        <input type="button" class="btn btnyellow" value="+" onclick="myOperators(this.value)" />
+        <input type="button" class="btn btnyellow" value="+" onclick="myFunction(this.value)" />
+  
       </div>
       <div>
         <input
@@ -88,9 +89,13 @@
           value="0"
           onclick="myFunction(this.value)"
         />
-        <input type="button" class="btn btndgrey" value="." onclick="myOperators(this.value)" />
-        <input type="button" class="btn btnyellow" value="=" onclick="myOperators(this.value)" />
+        <input type="button" class="btn btndgrey" value="." onclick="myFunction(this.value)" />
+        <input type="button" class="btn btnyellow" value="=" onclick="myFunction(this.value)" />
       </div>
+<br><br>
+      <button type="Number" onclick="ikwordgek()">ikwordgek</button>
+      <span id="omygod"></span>
     </div>
+    <br><br>
   </body>
 </html>
