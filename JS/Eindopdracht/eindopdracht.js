@@ -140,23 +140,7 @@ function myFunction(value1, value2) {
   
 }
 
-// let a = 1;
-// let b = 2;
 
-let antwoordtest = a + b;
-let antwoordtest1 = a * b;
-let antwoordtest2 = b / a;
-let antwoordtest3 = a % b;
-let antwoordtest4 = a - b;
-console.log(a, b, antwoordtest)
-
-function ikwordgek() {
-let a = 1;
-let b = 2;
-let crazy = (a * b);
-document.getElementById("omygod").innerHTML = crazy;
-console.log(crazy, a, b);
-}
 
 
 // 

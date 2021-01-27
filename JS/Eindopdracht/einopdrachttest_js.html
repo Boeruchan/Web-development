@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <script src="einopdrachttest.js"></script>
+    <title>Eindopdracht test JS</title>
+  </head>
+  <body>
+    <div class="calcboven" id="output"></div>
+    <div class="calconder">
+      <div>
+        <button class="btn btngrey" id="AC" onclick="reply_clear()">AC</button>
+        <button class="btn btngrey" id="+/-" onclick="reply_test()">+/-</button>
+        <button class="btn btngrey" id="%" onclick="reply_click(this.id)">%</button>
+        <button class="btn btnyellow" id="/" onclick="reply_click(this.id)">/</button>
+      </div>
+      <div>
+        <button class="btn btndgrey" id="7" onclick="reply_click(this.id)">7</button>
+        <button class="btn btndgrey" id="8" onclick="reply_click(this.id)">8</button>
+        <button class="btn btndgrey" id="9" onclick="reply_click(this.id)">9</button>
+        <button class="btn btnyellow" id="*" onclick="reply_click(this.id)">*</button>
+        <!-- <input type="button" class="btn btnyellow" value="*" onclick="myFunction()" /> -->
+      </div>
+      <div>
+        <button class="btn btndgrey" id="4" onclick="reply_click(this.id)">4</button>
+        <button class="btn btndgrey" id="5" onclick="reply_click(this.id)">5</button>
+        <button class="btn btndgrey" id="6" onclick="reply_click(this.id)">6</button>
+        <button class="btn btnyellow" id="-" onclick="reply_click(this.id)">-</button>
+      </div>
+      <div>
+        <button class="btn btndgrey" id="1" onclick="reply_click(this.id)">1</button>
+        <button class="btn btndgrey" id="2" onclick="reply_click(this.id)">2</button>
+        <button class="btn btndgrey" id="3" onclick="reply_click(this.id)">3</button>
+        <button class="btn btnyellow" id="+" onclick="reply_click(this.id)">+</button>
+      </div>
+      <div>
+        <button class="btn btnlong btndgrey" id="0" onclick="reply_click(this.id)">0</button>
+        <button class="btn btndgrey" id="." onclick="reply_click(this.id)">.</button>
+        <button class="btn btnyellow" id="=" onclick="reply_totaal()">=</button>
+      </div>
+      <br /><br />
+      <button type="Number" onclick="ikwordgek()">ikwordgek</button>
+      <span id="omygod"></span>
+    </div>
+    <br /><br />
+  </body>
+</html>
