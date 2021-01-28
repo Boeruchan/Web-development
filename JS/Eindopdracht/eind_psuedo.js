@@ -123,6 +123,11 @@ function myFunction() {
 */
 - Maak nu bij click de juiste variables dus 1 = 1, 2 = 2 etc
 
+kleur veranderen van oranje naar wit en visa versa voor text.
+Eerst proberen om alleen button kleur te veranderen en dan pas text.
+
+
+
 
 -----------------------------------test--------------------
 
@@ -298,4 +303,29 @@ console.log(data);
 // let crazy = (a * b);
 // document.getElementById("omygod").innerHTML = crazy;
 // console.log(crazy, a, b);
+// }
+
+// document.querySelector(".btnyellow").onclick=function(){
+//     document.querySelector(".exp").style.color="red";
+// };
+
+// function reply_click(clicked_id) {
+//     let uitkomst = document.getElementById("output").innerText += clicked_id;
+//     document.getElementById("ac").innerHTML = "C";
+//     let plus = document.getElementById("+");
+//     plus.addEventListener('click', function(e) {
+//         if (white === white) {
+//             plus.style.color = orange;
+//             color = orange;
+//             plus.style.backgroundColor = white;
+//             backgroundColor = white;
+//         } else {
+//             plus.style.color = white;
+//             color = white;
+//             plus.style.backgroundColor = orange;
+//             backgroundColor = orange;
+//         } false
+//         console.log(uitkomst);
+//         console.log(plus);
+// })
 // }
