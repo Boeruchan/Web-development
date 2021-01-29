@@ -78,7 +78,7 @@ function reply_totaal() {
     // }
     // console.log(temp);
     totaal = eval(totaal);
-    
+    console.log(temp)
     //als nummer geen rond getal is, dus decimaal, rond het naar 2 decimaal.
     if (!Number.isInteger(totaal)) {
         totaal = totaal.toFixed(2);
@@ -88,6 +88,9 @@ function reply_totaal() {
     let antwoord = document.getElementById("output").innerText = totaal;
     // console.log(antwoord);
 };
+
+
+
 
 
 

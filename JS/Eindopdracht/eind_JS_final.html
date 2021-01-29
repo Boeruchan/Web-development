@@ -4,15 +4,15 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
-    <script src="einopdrachttest.js"></script>
-    <title>Eindopdracht test JS</title>
+    <script src="eind_JS_final.js"></script>
+    <title>Eindopdracht final JS</title>
   </head>
   <body>
-    <div class="calcboven" id="output"></div>
+    <div class="calcboven" id="output" maxlength="10"></div>
     <div class="calconder">
       <div>
         <button class="btn btngrey" id="ac" onclick="reply_clear()">AC</button>
-        <button class="btn btngrey" id="+/-" onclick="reply_test()">+/-</button>
+        <button class="btn btngrey" id="+/-" onclick="reply_posneg()">+/-</button>
         <button class="btn btngrey" id="%" onclick="reply_click(this.id)">%</button>
         <button class="btn btnyellow" id="/" onclick="reply_click(this.id)">/</button>
       </div>
@@ -40,9 +40,6 @@
         <button class="btn btndgrey" id="." onclick="reply_click(this.id)">.</button>
         <button class="btn btnyellow" id="=" onclick="reply_totaal()">=</button>
       </div>
-      <br /><br />
-      <button type="Number" onclick="ikwordgek()">ikwordgek</button>
-      <span id="omygod"></span>
     </div>
     <br /><br />
   </body>

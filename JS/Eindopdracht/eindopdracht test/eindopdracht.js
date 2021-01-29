@@ -1,4 +1,4 @@
-/*
+/* 
 // button geeft de juiste value aan.
 function myFunction(value) {
     document.getElementById("output").innerHTML = value;
@@ -73,7 +73,7 @@ function myFunction(value) {
 
 
 ------------------------------boven niet aanraken.
-*/
+
 
 
 // Operators geeft nu nan aan, maak ze werkend
@@ -87,12 +87,12 @@ let outputKeyNumber;
 
 
 function myFunction(value1, value2) {
-    // const keyNumber = value1;
-    // const keyNumber2 = value2;
+    const keyNumber = value1;
+    const keyNumber2 = value2;
     if (value1 == 1  || value1 == 2 || value1 == 3 || value1 == 4 || value1 == 5 || value1 == 6 || value1 == 7 || value1 == 8 || value1 == 9 || value1 == 0) {
     if (value2 == "AC" || value2 == "%" || value2 == "%");
-      // outputKeyNumber = eval(keyNumber);
-    // outputKeyNumber1 = eval(keyNumber2);
+      outputKeyNumber = eval(keyNumber);
+    outputKeyNumber1 = eval(keyNumber2);
     let testAntwoord = document.getElementById("output").innerHTML += value1;
     console.log(testAntwoord);
   } else { 
@@ -143,12 +143,12 @@ function myFunction(value1, value2) {
 
 
 
-// 
-// console.log(antwoordtest, antwoordtest1, antwoordtest2, antwoordtest3, antwoordtest4);
+
+console.log(antwoordtest, antwoordtest1, antwoordtest2, antwoordtest3, antwoordtest4);
 
           
 
 
 
 
-
+*/
