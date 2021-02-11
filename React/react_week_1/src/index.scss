@@ -6,6 +6,12 @@ body {
   ol, ul {
     padding-left: 30px;
   }
+
+  .app {
+    display: inline-block;
+    width: auto;
+    color: green;
+  }
   
   .board-row:after {
     clear: both;

@@ -1,6 +1,19 @@
-import React from 'react';
+import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 import './index.scss';
+import Testing from './test/testing_week_10';
+
+class App extends Component {
+  render() {
+    return (
+      <div className="App">
+        <h1>Hi, I'm a React app</h1>
+        <p>This is really working</p>
+        <Testing />
+      </div>
+    );
+  }
+}
 
 function Square(props) { 
     return (
@@ -122,7 +135,6 @@ function Square(props) {
     }
   }
 
-
   // ========================================
   
   ReactDOM.render(
@@ -149,4 +161,6 @@ function Square(props) {
   }
   return null;
 }
+
+
   
