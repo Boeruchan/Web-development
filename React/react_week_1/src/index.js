@@ -3,17 +3,17 @@ import ReactDOM from 'react-dom';
 import './index.scss';
 import Testing from './test/testing_week_10';
 
-class App extends Component {
-  render() {
-    return (
-      <div className="App">
-        <h1>Hi, I'm a React app</h1>
-        <p>This is really working</p>
-        <Testing />
-      </div>
-    );
-  }
-}
+let app = (
+  <div>
+  <h1>Hi, I'm a React app</h1>
+  <p>This is really working</p>
+  <Testing />
+</div>
+);
+
+ReactDOM.render(app, document.querySelector('#app'));
+
+
 
 function Square(props) { 
     return (
@@ -139,7 +139,7 @@ function Square(props) {
   
   ReactDOM.render(
     <Game />,
-    document.getElementById('root')
+    document.getElementById('root'),
   );
 
   function calculateWinner(squares) {
