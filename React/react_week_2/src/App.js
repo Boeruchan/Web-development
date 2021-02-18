@@ -4,8 +4,10 @@ import React,  { Component } from 'react';
 import './App.css';
 import Person from './Person/Person';
 // import { useState } from 'react';
-import UserInput from './Userinput/Userinput';
-import UserOutput from './Useroutput/Useroutput';
+// import UserInput from './Userinput/Userinput';
+// import UserOutput from './Useroutput/Useroutput';
+import UserInput from './Userinput/Userinput_2';
+import UserOutput from './Useroutput/Useroutput_2';
 
 
 /* class version
@@ -157,31 +159,54 @@ render() {
 }
 */
 
+// class App extends Component {
+//   state = {
+//     username: 'superTurtle'
+//   }
+
+//   nameChangedHandler = (event) => {
+//     this.setState({username: event.target.value});
+//   }
+
+
+
+//   render() {
+//     return (
+//       <div className="App">
+//         <UserInput changed={this.nameChangedHandler} 
+//         currentName={this.state.username} />
+//         <UserOutput userName={this.state.username} />
+//         <UserOutput userName={this.state.username} />
+//         <UserOutput userName="Turtle" />
+
+
+//       </div>
+//     )
+//   }
+// }
+
+
 class App extends Component {
   state = {
-    username: 'superTurtle'
+    username:'superturtle'
   }
 
-  nameChangedHandler = (event) => {
-    this.setState({username: event.target.value});
+  usernameChangedHandler = (event) => {
+this.setState({UserName: event.target.value});
   }
 
-
-
-  render() {
+  render () {
     return (
       <div className="App">
-        <UserInput changed={this.nameChangedHandler} 
-        currentName={this.state.username} />
-        <UserOutput userName={this.state.username} />
-        <UserOutput userName={this.state.username} />
-        <UserOutput userName="Turtle" />
+        <UserInput changed={this.usernameChangedHandler} />
+        <UserOutput UserName={this.state.username} />
+        <UserOutput UserName={this.state.username}/>
+        <UserOutput UserName="tortoise"/>
 
 
       </div>
     )
   }
 }
-
 
 export default App;
