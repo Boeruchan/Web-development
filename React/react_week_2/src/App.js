@@ -8,7 +8,8 @@ import Person from './Person/Person';
 // import UserOutput from './Useroutput/Useroutput';
 import UserInput from './Userinput/Userinput_2';
 import UserOutput from './Useroutput/Useroutput_2';
-import validation from './validationcomponent/validationcomponent';
+import Validation from './validationcomponent/validationcomponent';
+import CharComponent from './CharComponent/Charcomponent';
 
 
 /* class version
@@ -367,18 +368,36 @@ state = {
   userInput: ''
 }
 
-  inputChangedHandler = (event) => {
+  inputChangedHandler = ( event ) => {
     this.setState({userInput: event.target.value});
+  }
+
+  deleteCharHandler = ( index ) => {
+    const text = this.state.userInput.split('');
+    text.splice(index, 1);
+    const updatedText = text.join('');
+    this.setState({userInput: updatedText});
+
   }
 
 
   render(){
+    const CharList = this.state.userInput.split('').map((ch, index) => {
+      return <CharComponent
+      character={ch}
+      key={index}
+      clicked={() => this.deleteCharHandler(index)} />;
+    });
+
   return (
     <div className="App">
     <input type="tekst"
     onChange={this.inputChangedHandler}
     value={this.state.userInput} />
     <p>{this.state.userInput}</p>
+    <Validation inputLength={this.state.userInput.length} />
+    {CharList}
+
       </div>
   );
 }
