@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Calendar from 'react-calendar';
 import 'react-calendar/dist/Calendar.css';
 import './App.css';
@@ -8,6 +8,19 @@ import {nanoid} from "nanoid";
 
 function App(props) {
   const [tasks, setTasks] = useState(props.tasks);
+  const fs = require('fs');
+
+  useEffect(() => {
+    const data = localStorage.getItem("taskList")
+    if(data) {
+      setTasks(JSON.parse(data))
+    };
+  }, []);
+  
+  useEffect(() => {
+    localStorage.setItem("taskList", JSON.stringify(tasks))
+  },[]);
+  // console.log(tasks);
 
   function toggleTaskCompleted(id){
     const updatedTasks = tasks.map(task => {
@@ -19,6 +32,8 @@ function App(props) {
     setTasks(updatedTasks);
     console.log(updatedTasks);
   }
+
+
 
   function deleteTask(id) {
     const remainingTasks = tasks.filter(task => id !== task.id);
@@ -43,7 +58,6 @@ function App(props) {
   }
 
   return (
-
     <div className="todoapp stack-large">
           <Calendar />
       <Form addTask={addTask} />
@@ -59,5 +73,6 @@ function App(props) {
       </div>
   );
 }
+
 
 export default App;
