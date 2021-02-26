@@ -8,7 +8,6 @@ import {nanoid} from "nanoid";
 
 function App(props) {
   const [tasks, setTasks] = useState(props.tasks);
-  const fs = require('fs');
 
   useEffect(() => {
     const data = localStorage.getItem("taskList")
@@ -19,9 +18,10 @@ function App(props) {
   
   useEffect(() => {
     localStorage.setItem("taskList", JSON.stringify(tasks))
-  },[]);
-  // console.log(tasks);
+  },);
+  console.log(JSON.stringify(tasks));
 
+  
   function toggleTaskCompleted(id){
     const updatedTasks = tasks.map(task => {
       if (id === task.id) {
@@ -40,32 +40,35 @@ function App(props) {
     setTasks(remainingTasks);
   }
 
-  const taskList = tasks.map(task => (
-  <Todo
-  id={task.id}
-  name={task.name}
-  completed={task.completed}
-  key={task.id}
-  toggleTaskCompleted={toggleTaskCompleted}
-  deleteTask={deleteTask}
-  />
-  )
-  );
 
-  function addTask(name) {
-    const newTask = {id:"todo-" + nanoid(), name: name, completed: false};
-    setTasks([...tasks, newTask]);
-  }
+
+
+  const taskList = tasks.map(task => (
+    <Todo
+    id={task.id}
+    name={task.name}
+    completed={task.completed}
+    key={task.id}
+    toggleTaskCompleted={toggleTaskCompleted}
+    deleteTask={deleteTask}
+    />
+    )
+    );
+  
+    function addTask(name) {
+      const newTask = {id:"todo-" + nanoid(), name: name, completed: false};
+      setTasks([...tasks, newTask]);
+    }
 
   return (
-    <div className="todoapp stack-large">
+    <div className="todoapp">
           <Calendar />
       <Form addTask={addTask} />
       <h1>TodoList</h1>
  
     <ul
       role="list"
-      className="todo-list stack-large stack-exception"
+      className="todo-list"
       aria-labelledby="list-heading"
     >
       {taskList}
