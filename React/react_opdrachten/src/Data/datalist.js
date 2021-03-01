@@ -1,4 +1,4 @@
-
+export const dataLijst =
 [
     {
         "date": "1-1-2020",

@@ -75,7 +75,9 @@ function App(props) {
       </ul>
       </div>
   );
+
 }
+console.log(Calendar);
 
 
 export default App;
