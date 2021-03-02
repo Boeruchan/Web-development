@@ -6,10 +6,9 @@ import './App.css';
 
 
 const data =
-{ "datums": [
-{ date: 1,
-    month: 2,
-    name: "meDay"
+{ datums: [
+{ date: "1-1-2020",
+  name: "NewYearsEve"
 },
 { date: 10,
   month: 2,
@@ -19,27 +18,46 @@ const data =
 }
 
 
-// const feestdatum = JSON.parse(data);
+
+// const data =
+// { datums: [
+// { date: 20,
+//     month: 2,
+//     name: "meDay"
+// },
+// { date: 10,
+//   month: 2,
+//   name: "KillmeDay"
+// }
+// ]
+// }
+let n = new Date("1-1-2021");
+let d = n.getDate();
+let m = n.getMonth();
+let y = n.getFullYear();
+console.log(d +" "+ m + " "+ y)
 
 function tileContent({date, view}) {
- 
-  
-  //     return (
-  // view === "month" &&
-  // date.getDate() === 2 &&
-  // date.getMonth() === 3 ?
-  // (<p>Koningsdag</p>) : 
-  // date.getDate() === 6 &&
-  // date.getMonth() === 3 ?
-  // (<p>tralaadag</p>) : null
 
+
+  return data.datums.map(el=>{
 
   return (
-    view === "month" &&
-    date.getDate() === data.datums[0].date &&
-    date.getMonth() === data.datums[0].month ?
-    (<p>{JSON.stringify(data.datums[1].name)}</p>) : null
-    ); } 
+           view === "month" &&
+           date.getDate() === el.date &&
+           date.getMonth() === el.month ?
+           (<p>{JSON.stringify(el.name)}</p>) : null
+           ); } )}  
+
+
+      // function tileContent({date, view}) {
+      //   return (
+      //     view === "month" &&
+      //     date.getDate() === data.datums[0].date &&
+      //     date.getMonth() === data.datums[0].month ?
+      //     (<p>{JSON.stringify(data.datums[1].name)}</p>) : null
+      //     ); } 
+    
 
 function App() {
 const [value, setValue] = useState(new Date());
