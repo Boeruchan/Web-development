@@ -4,19 +4,16 @@ import Calendar from 'react-calendar';
 import 'react-calendar/dist/Calendar.css';
 import './App.css';
 
-
 const data =
 { datums: [
-{ date: "1-1-2020",
+{ date: "2-2-2021",
   name: "NewYearsEve"
 },
-{ date: 10,
-  month: 2,
+{ date: "2-15-2021",
   name: "KillmeDay"
 }
 ]
 }
-
 
 
 // const data =
@@ -31,7 +28,8 @@ const data =
 // }
 // ]
 // }
-let n = new Date("1-1-2021");
+
+let n = new Date(data.datums[0].date);
 let d = n.getDate();
 let m = n.getMonth();
 let y = n.getFullYear();
@@ -41,11 +39,11 @@ function tileContent({date, view}) {
 
 
   return data.datums.map(el=>{
-
+let temp = new Date(el.date);
   return (
            view === "month" &&
-           date.getDate() === el.date &&
-           date.getMonth() === el.month ?
+           date.getDate() === temp.getDate() &&
+           date.getMonth() === temp.getMonth() ?
            (<p>{JSON.stringify(el.name)}</p>) : null
            ); } )}  
 
