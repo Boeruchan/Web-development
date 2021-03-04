@@ -1,61 +1,93 @@
-
 import React, { useState } from 'react';
 import Calendar from 'react-calendar';
 import 'react-calendar/dist/Calendar.css';
+import Form from './Todo/Form';
+// import Todo from './Todo/Todo';
+
 import './App.css';
 
 const data =
 { datums: [
-{ date: "2-2-2021",
+  {
+  date: "1-1-2020",
   name: "NewYearsEve"
 },
-{ date: "2-15-2021",
-  name: "KillmeDay"
-}
+{
+  date: "4-10-2020",
+  name: "GoodFriday"
+},
+{
+  date: "4-12-2021",
+  name: "Easter"
+},
+{
+  date: "4-13-2021",
+  name: "Easter",
+  background: "red"
+},
+{
+  date: "4-27-2021",
+  name: "KingsDay"
+},
+{
+  date: "5-5-2021",
+  name: "LiberationDay"
+},
+{
+  date: "5-21-2021",
+  name: "Ascension"
+},
+{
+  date: "5-31-2021",
+  name: "Penetecost"
+},
+{
+  date: "6-1-2021",
+  name: "Ascension"
+},
+{
+  date: "12-25-2021",
+  name: "ChristmasEve"
+},
+{
+  date: "12-26-2021",
+  name: "Christmas"
+},
+{
+  date: "12-31-2021",
+  name: "NewYearsEve"
+  } 
 ]
 }
 
+const TestObject = () => {
+  const [showResults, setShowResults] = useState(false);
+  const onClick = () => setShowResults(true)
+  return (
+    <div>
+      <input type="submit" value="search" onClick={onClick} />
+      { showResults ? <App /> : null }
+      </div>
+  )
+}
+// const TooDoo = () => (
+//   <Todo />
+// )
 
-// const data =
-// { datums: [
-// { date: 20,
-//     month: 2,
-//     name: "meDay"
-// },
-// { date: 10,
-//   month: 2,
-//   name: "KillmeDay"
-// }
-// ]
-// }
-
-let n = new Date(data.datums[0].date);
-let d = n.getDate();
-let m = n.getMonth();
-let y = n.getFullYear();
-console.log(d +" "+ m + " "+ y)
 
 function tileContent({date, view}) {
+return data.datums.map(el=>{
 
-
-  return data.datums.map(el=>{
-let temp = new Date(el.date);
+const temp = new Date(el.date);
+const sliceNaam = el.name.slice(1,2);
   return (
            view === "month" &&
            date.getDate() === temp.getDate() &&
            date.getMonth() === temp.getMonth() ?
-           (<p>{JSON.stringify(el.name)}</p>) : null
-           ); } )}  
-
-
-      // function tileContent({date, view}) {
-      //   return (
-      //     view === "month" &&
-      //     date.getDate() === data.datums[0].date &&
-      //     date.getMonth() === data.datums[0].month ?
-      //     (<p>{JSON.stringify(data.datums[1].name)}</p>) : null
-      //     ); } 
-    
+           <p className="groen">{sliceNaam}</p> : null
+          )
+ });
+      }
 
 function App() {
 const [value, setValue] = useState(new Date());
@@ -68,18 +100,12 @@ return (
   <div className="App">
   <Calendar
   tileContent= {tileContent}
-  // tileContent= {(({ activeStartDate, date, view }) => view === 'month' && date.getDate() === 10 && date.getMonth() === 3 ? (<p>Koningsdag</p>) : null) }
   onChange={onChange}
+  onClick={TestObject}
   value={value}
   />
-  <div>
-  <pre style={{backgroundColor:'#eee'}}>{JSON.stringify(data.datums, null, 2)}</pre>
-  <pre style={{backgroundColor:'red'}}>{JSON.stringify(data.datums.name)}</pre>
-  <pre style={{backgroundColor:'lightblue'}}>{JSON.stringify(data.datums[1].month)}</pre>
-  <pre style={{backgroundColor:'lightgreen'}}>{JSON.stringify(data.datums[0].date)}</pre>
-  <pre style={{backgroundColor:'red'}}>{JSON.stringify(data.name)}</pre>
-  <pre style={{backgroundColor:'lightblue'}}>{JSON.stringify(data.month)}</pre>
-  <pre style={{backgroundColor:'lightgreen'}}>{JSON.stringify(data.date)}</pre>
+  <div id="results">
+  <Form />
   </div>
   </div>
 );
