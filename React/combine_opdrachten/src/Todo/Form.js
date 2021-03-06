@@ -1,20 +1,20 @@
 import React, {useState} from 'react';
 
-const Form = (props) => {
+function Form(props) {
     const [name, setName] = useState('');
 
-    const handleSubmit = (e) => {
+    function handleSubmit(e) {
         e.preventDefault();
         props.addTask(name);
         setName("");
     }
 
-    const handleChange = (e) => {
+    function handleChange(e) {
       setName(e.target.value);
   }
     return (
       
-        <form onSubmit={(e) => handleSubmit(e)}>
+        <form onSubmit={handleSubmit}>
           
         <h2 className="label-wrapper">
           <label htmlFor="new-todo-input" className="label__lg">

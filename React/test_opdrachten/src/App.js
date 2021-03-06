@@ -60,24 +60,8 @@ const data =
 ]
 }
 
-const TestObject = () => {
-  const [showResults, setShowResults] = useState(false);
-  const onClick = () => setShowResults(true)
-  return (
-    <div>
-      <input type="submit" value="search" onClick={onClick} />
-      { showResults ? <App /> : null }
-      </div>
-  )
-}
-// const TooDoo = () => (
-//   <Todo />
-// )
-
-
-function tileContent({date, view}) {
+const tileContent = ({date, view}) => {
 return data.datums.map(el=>{
-
 const temp = new Date(el.date);
 const sliceNaam = el.name.slice(1,2);
   return (
@@ -89,10 +73,10 @@ const sliceNaam = el.name.slice(1,2);
  });
       }
 
-function App() {
+const App = () => {
 const [value, setValue] = useState(new Date());
 
-function onChange(nextValue) {
+const onChange = (nextValue) => {
   setValue(nextValue);
 }
 
@@ -101,13 +85,14 @@ return (
   <Calendar
   tileContent= {tileContent}
   onChange={onChange}
-  onClick={TestObject}
   value={value}
+  // onClickDay={Form}
   />
-  <div id="results">
-  <Form />
+    <div>
+    <Form />
   </div>
   </div>
+
 );
 }
 
