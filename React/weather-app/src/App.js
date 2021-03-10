@@ -1,26 +1,73 @@
-import React from 'react'; 
+import React from 'react';
 import './App.css';
-import axios from 'axios';
+import WeatherOverview from './Components/WeatherOverview';
+import Form from './Components/WeatherForm';
+import Forecast from './Components/WeatherCard';
 
-function App() {
-  const object={message:"hello from react"}
+const api_key = '';
+
+class App extends React.Component {
+  state = {
+    temperature: "",
+    city: "",
+    country:  "",
+    humidity: "",
+    pressure: "",
+    icon: "",
+    description: "",
+    error:  ""
+  }
+
+  getWeather = async (e) => {
+    const city = e.target.elements.city.value;
+    const country = e.target.elements.country.value;
+    e.preventDefault();
+    const api_call = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city},${country}&units=metric&appid=${api_key}`)
+  
+    const response = await api_call.json();
+    if(city && country) {
+      this.setState({
+      temperature: response.main.temp,
+      city: response.name,
+      country: response.sys.country,
+      humidity: response.main.humidity,
+      icon: response.weather[0].icon,
+      description: response.weather[0].description,
+      error: ""
+    })
+    }else{
+      this.setState({
+        error: "Please fill out input fields..."
+      })
+    }
+  }
+
+ render() {
   return (
     <div className="App">
       <header>
-        <h1>React Weather App</h1>
+        <WeatherOverview />
       </header>
+      <Form loadWeather={this.getWeather} />
       <main>
-        <button onClick={()=>{
-          axios.post("http://localhost:3000/",object).then((res)=>{
-            console.log(res)
-          })
-        }}>Send request</button>
+      <Forecast
+      icon = {this.state.icon}
+      temperature = {this.state.temperature}
+      city =  {this.state.city}
+      country = {this.state.country}
+      humidity = {this.state.humidity}
+      pressure = {this.state.pressure}
+      description = {this.state.description}
+      error = {this.state.error}
+      />
       </main>
+  
       <footer>
         <p>made by ching</p>
       </footer>
     </div>
   );
+}
 }
 
 export default App;
