@@ -1,68 +1,70 @@
 import React,  { useState, useEffect } from 'react';
-// import Accordion from 'react-bootstrap/Accordion'
 
 function WeatherDetail({lat, ion}) {
-    const [details, setDetails] = useState([]);
- 
-    useEffect(() => {
+    const [details, setDetails] = useState('');
+    const  [date, setDate] = useState([]);
+
+    useEffect(() => {       
         const getDataFromServer = async()=>{
-            let req = await fetch(`https://api.openweathermap.org/data/2.5/onecall?lat=${lat}&lon=${ion}&exclude=hourly&units=metric&appid=${process.env.REACT_APP_WEATHER_API_KEY}`)
+            // let req = await fetch(`https://api.openweathermap.org/data/2.5/onecall?lat=${lat}&lon=${ion}&exclude=hourly&units=metric&appid=${process.env.REACT_APP_WEATHER_API_KEY}`)
+            let req = await fetch('/weather.json')
              let data = await req.json();
-             console.log(data);
-            setDetails(data);        
-          }
+            setDetails(data);
+            setDate(data.daily);    
+            console.log(data);    
+          } 
         getDataFromServer()
-    }, []);
-// console.log(details)
+    }, [lat, ion]);
 
-// const weather = details.daily[0].temp;
+const realDate = date.map((datum) =>
+new Date(datum.dt * 1000).toLocaleDateString()
+);
 
-// console.log(weather)
+const tablestyle = {
+    border: "1px solid black",
+    itemAlign: 'center',
+    margin: 'auto'
+}
 
-const d = new Date(details.daily[1].dt*1000);
-let DateTime = d.toLocaleDateString();
-console.log(d);
+const cardsecond = {
+    backgroundColor: 'lightblue',
+    height: '120px',
+    width: '500px',
+    border: '2px solid black',
+    padding: '10px',
+    textAlign: 'center',
+    margin: '20px'
+}
 
-console.log(DateTime);
-
+if (details === ""){
+    return <p>loading</p>
+} else {
         return(
-        
-            <div>
-                <h1>Amsterdam details</h1>
-              
-             <h3>{DateTime}
-             <img src={`http://openweathermap.org/img/wn/${details.daily[0].weather[0].icon}@2x.png`} alt='' width='50px'/>
+            <div> <h1>{details.timezone} details</h1>
+                    <div style={cardsecond}>     
+                <h3> {realDate[0]} <img src={`http://openweathermap.org/img/wn/${details.daily[0].weather[0].icon}@2x.png`} alt='' width='50px'/>
              {details.daily[0].temp.min}/{details.daily[0].temp.max}C
              </h3>  
-                 <table>
-                    <td>
-                        <tr></tr>
-                        <tr>Temperature</tr>
-                        </td>
-                        <td>
-                        <tr>morning</tr>
-                        <tr>{details.daily[0].temp.morn}</tr>
-                        </td>
-                        <td>
-                        <tr>afternoon</tr>
-                        <tr>{details.daily[0].temp.day}</tr>
-                    </td>
-                    <td>
-                        <tr>evening</tr>
-                        <tr>{details.daily[0].temp.eve}</tr>
-                        </td>
-                        <td>
-                        <tr>night</tr>
-                        <tr>{details.daily[0].temp.night}</tr>
-                    </td>
+                 <table style={tablestyle}>
+                        <tr>
+                            <th></th>
+                        <th>morning</th>
+                        <th>afternoon</th>
+                        <th>evening</th>
+                        <th>night</th>
+                        </tr>
+                        <tr>
+                        <th>Temperature</th>
+                        <td>{details.daily[0].temp.day}</td>
+                        <td>{details.daily[0].temp.morn}</td>
+                        <td>{details.daily[0].temp.eve}</td>
+                        <td>{details.daily[0].temp.night}</td>
+                        </tr>
                 </table>
-              
-            </div> 
-
-            
+               </div> 
+             </div>
         )
-        
-    
+        } 
 }
 
     export default WeatherDetail;

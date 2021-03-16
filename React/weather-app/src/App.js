@@ -6,12 +6,12 @@ import WeatherDetail from './Components/WeatherDetail';
 function App() {
   return (
     <div className='App'>
-      {/* <WeatherFetch city="Amsterdam"/> */}
+      <WeatherFetch city="Amsterdam"/>
       <WeatherDetail
       lat="52.374"
       ion="4.8897"
       />
-      {/* <WeatherFetch city="Zwijndrecht"/> */}
+      <WeatherFetch city="Zwijndrecht"/>
      
   </div>
 )

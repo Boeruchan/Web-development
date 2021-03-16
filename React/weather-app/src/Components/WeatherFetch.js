@@ -1,18 +1,18 @@
 import React,  { useState, useEffect } from 'react';
 
 function WeatherFetch({city}) {
-    const [posts, setPosts] = useState([]);
- 
+    const [posts, setPosts] = useState('');
+    // console.log(posts)
     useEffect(() => {
         const getDataFromServer = async()=>{
-            let req = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=${process.env.REACT_APP_WEATHER_API_KEY}`)
+            // let req = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=${process.env.REACT_APP_WEATHER_API_KEY}`)
+            let req = await fetch('/weathers.json')
              let data = await req.json();
              console.log(data);
             setPosts(data);        
           }
         getDataFromServer()
- 
-    }, []);
+    }, [city]);
 
     const card = {
         backgroundColor: 'lightblue',
@@ -32,9 +32,12 @@ function WeatherFetch({city}) {
         padding: '10px',
         fontFamily: 'Ariel'
     }
+    // console.log(posts)
 
+if (posts === ""){
+    return <p>loading</p>
+} else {
     return(
-        
         <div style={card}>
             <h1>{posts.name}</h1>
            <img src={`http://openweathermap.org/img/wn/${posts.weather[0].icon}@2x.png`} alt='' />
@@ -54,6 +57,7 @@ function WeatherFetch({city}) {
             </table>
         </div>
     )
+}
 }
 
 export default WeatherFetch;
