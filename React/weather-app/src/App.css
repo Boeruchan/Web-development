@@ -1,18 +1,80 @@
 * {
   margin: 0px;
   padding: 0px;
+  box-sizing: border-box;
+  font-family:Arial, Helvetica, sans-serif;
 }
 
-body {
- display: flex;
-    flex-direction: column;
-  }
+.app {
+  width: 100%;
+  min-height: 100vh;
+  padding: 20px 0;
 
+}
 
-main {
-  min-height: 400px;
-  width: 300px;
-  border: 1px solid black;
-  border-radius: 25px;
-  background-color: rgb(240, 225, 205);
+.container {
+  width: 100%;
+  max-width: 350px;
+  margin: auto;
+}
+
+.accordion {
+  width: 100%;
+  max-width: 450px;
+  margin: 0px 20px;
+  color: black;
+}
+
+.accordionHeading {
+  background: darkolivegreen;
+  padding: 14px 0;
+}
+
+.accordionHeading .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.accordionHeading Span {
+  cursor: pointer;
+}
+
+.accordionContent {
+  height: 0;
+  opacity: 0;
+  padding: 15px;
+  display: flex;
+  overflow: hidden;
+}
+
+.accordionContent.show {
+  height: 180px;
+  opacity: 1;
+}
+
+.accordionContent, table, tr, td {
+  background: rgb(214, 223, 200);
+  width: 100%;
+  max-width: 450px;
+  color: black;
+  padding: 10px;
+  text-align: center;
+}
+
+.card {
+background-color: lightblue;
+height: 350px;
+width: 300px;
+border: 2px solid black;
+border-radius: 25px;
+padding: 20px;
+text-align: center;
+margin: 20px;
+}
+
+.cardtext {
+  background-color: white;
+  border-radius: 15px;
+
 }

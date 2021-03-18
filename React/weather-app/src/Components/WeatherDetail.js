@@ -1,8 +1,11 @@
 import React,  { useState, useEffect } from 'react';
+import { uuid } from 'uuidv4';
 
-function WeatherDetail({lat, ion}) {
+function WeatherDetail({lat, ion, active, setActive}) {
     const [details, setDetails] = useState('');
     const  [date, setDate] = useState([]);
+    const {uuid} = require('uuidv4');
+    // console.log({uuid})
 
     useEffect(() => {       
         const getDataFromServer = async()=>{
@@ -10,61 +13,60 @@ function WeatherDetail({lat, ion}) {
             let req = await fetch('/weather.json')
              let data = await req.json();
             setDetails(data);
-            setDate(data.daily);    
-            console.log(data);    
+            setDate(data.daily);
+            // console.log(data);    
           } 
         getDataFromServer()
     }, [lat, ion]);
+    return (
 
-const realDate = date.map((datum) =>
-new Date(datum.dt * 1000).toLocaleDateString()
-);
+<div className="shit">
 
-const tablestyle = {
-    border: "1px solid black",
-    itemAlign: 'center',
-    margin: 'auto'
-}
+{date &&
+    date.map((datum, index) => {
+        const d = new Date(datum.dt * 1000);
+        const n = d.toLocaleDateString();
+        // console.log(d, n);
 
-const cardsecond = {
-    backgroundColor: 'lightblue',
-    height: '120px',
-    width: '500px',
-    border: '2px solid black',
-    padding: '10px',
-    textAlign: 'center',
-    margin: '20px'
-}
-
-if (details === ""){
-    return <p>loading</p>
-} else {
+        <div>              
+        <h1>{details.timezone} details</h1>
+        </div>
         return(
-            <div> <h1>{details.timezone} details</h1>
-                    <div style={cardsecond}>     
-                <h3> {realDate[0]} <img src={`http://openweathermap.org/img/wn/${details.daily[0].weather[0].icon}@2x.png`} alt='' width='50px'/>
-             {details.daily[0].temp.min}/{details.daily[0].temp.max}C
-             </h3>  
-                 <table style={tablestyle}>
+            <div key={uuid()}>
+                <div className="accordion">
+                    <div className="accordionHeading">
+                    <div className="container">
+                <h3>{n} <img src={`http://openweathermap.org/img/wn/${datum.weather[0].icon}@2x.png`} alt='' width='50px'/>
+             <span>{Math.floor(datum.temp.min)}/{Math.floor(datum.temp.max)}C</span> </h3> 
+             <span onClick={() => setActive(n)}>{active === n ? "X" : "|||"}</span>          
+             </div>
+             </div>
+               <div className={(active === n ? "show" : "") + "accordionContent"}>
+                   <div className="container">
+                 <table>
                         <tr>
                             <th></th>
                         <th>morning</th>
                         <th>afternoon</th>
-                        <th>evening</th>
+                        <th>eve</th>
                         <th>night</th>
                         </tr>
                         <tr>
                         <th>Temperature</th>
-                        <td>{details.daily[0].temp.day}</td>
-                        <td>{details.daily[0].temp.morn}</td>
-                        <td>{details.daily[0].temp.eve}</td>
-                        <td>{details.daily[0].temp.night}</td>
+                        <td>{Math.floor(datum.temp.day)}</td>
+                        <td>{Math.floor(datum.temp.morn)}</td>
+                        <td>{Math.floor(datum.temp.eve)}</td>
+                        <td>{Math.floor(datum.temp.night)}</td>
                         </tr>
                 </table>
                </div> 
+             </div>  
              </div>
-        )
-        } 
-}
+             </div>       
+             );
+})}
+</div>
 
+    )
+}
     export default WeatherDetail;

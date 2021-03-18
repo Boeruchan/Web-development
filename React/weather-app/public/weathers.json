@@ -13,28 +13,28 @@
     ],
     "base": "stations",
     "main": {
-        "temp": 279.28,
-        "feels_like": 275.47,
-        "temp_min": 278.71,
-        "temp_max": 279.82,
-        "pressure": 1024,
-        "humidity": 87
+        "temp": 7.57,
+        "feels_like": 4.96,
+        "temp_min": 6.67,
+        "temp_max": 8.33,
+        "pressure": 1023,
+        "humidity": 93
     },
     "visibility": 10000,
     "wind": {
-        "speed": 3.6,
-        "deg": 280
+        "speed": 2.57,
+        "deg": 10
     },
     "clouds": {
         "all": 75
     },
-    "dt": 1615907101,
+    "dt": 1616077471,
     "sys": {
         "type": 1,
         "id": 1524,
         "country": "NL",
-        "sunrise": 1615873938,
-        "sunset": 1615916754
+        "sunrise": 1616046456,
+        "sunset": 1616089764
     },
     "timezone": 3600,
     "id": 2759794,
