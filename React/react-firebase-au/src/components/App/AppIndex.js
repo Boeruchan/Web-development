@@ -11,8 +11,6 @@ import Home from '../Home/HomeIndex';
 import AccountPage from '../Account/AccountIndex';
 import AdminPage from '../Admin/AdminIndex';
 
-
-
 const App = () => (
   <div>
      <Router>
