@@ -18,6 +18,7 @@ function App() {
       <div className='city'>
       <button onClick={toggled}>
         <WeatherFetch city="Amsterdam"/>
+        <img src="" />
         </button>
         <div className='detail'>
           {toggle ? <WeatherDetail lat="52.375" ion="4.8897" active={active} setActive={setActive} /> : null}

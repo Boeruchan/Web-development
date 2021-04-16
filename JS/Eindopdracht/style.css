@@ -8,6 +8,27 @@ buttons: kleur -> lichtgrijs, geel, dondergrijs.
          cijfer 0 heeft andere widht
 */
 
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  display: flex;
+  margin: 20%;
+  margin-top: 5%;
+  background-color: rgba(193, 255, 191, 0.63);
+}
+
+h1, p {
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-size: 1.3rem;
+}
+.text {
+  width: 50%;
+  margin-right: 5%;
+}
+
 .calcboven {
   background-color: rgb(62, 62, 65);
   display: block;
@@ -31,6 +52,8 @@ span {
   width: 375px;
   height: 460px;
   padding: 10px;
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
 }
 
 .btn {
