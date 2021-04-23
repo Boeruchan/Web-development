@@ -5,8 +5,7 @@ function WeatherFetch({city}) {
     // console.log(posts)
     useEffect(() => {
         const getDataFromServer = async()=>{
-            // let req = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=${process.env.REACT_APP_WEATHER_API_KEY}`)
-            let req = await fetch('/weathers.json')
+            let req = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=${process.env.REACT_APP_WEATHER_API_KEY}`)
              let data = await req.json();
             //  console.log(data);
             setPosts(data);        
@@ -23,7 +22,7 @@ if (posts === ""){
         <div className="card">
             <h1>{posts.name}</h1>
            <img src={`http://openweathermap.org/img/wn/${posts.weather[0].icon}@2x.png`} alt='' />
-           <b>{Math.floor(posts.main.temp)}</b>
+           <p>{Math.floor(posts.main.temp)}</p>
            <br /><br />
             <table className="cardtext">
                 <tr>

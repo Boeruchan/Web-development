@@ -9,8 +9,7 @@ function WeatherDetail({lat, ion, active, setActive}) {
 
     useEffect(() => {       
         const getDataFromServer = async()=>{
-            // let req = await fetch(`https://api.openweathermap.org/data/2.5/onecall?lat=${lat}&lon=${ion}&exclude=hourly&units=metric&appid=${process.env.REACT_APP_WEATHER_API_KEY}`)
-            let req = await fetch('/weather.json')
+            let req = await fetch(`https://api.openweathermap.org/data/2.5/onecall?lat=${lat}&lon=${ion}&exclude=hourly&units=metric&appid=${process.env.REACT_APP_WEATHER_API_KEY}`)
              let data = await req.json();
             setDetails(data);
             setDate(data.daily);
@@ -20,7 +19,7 @@ function WeatherDetail({lat, ion, active, setActive}) {
     }, [lat, ion]);
     return (
 
-<div className="shit">
+<div className="week">
 
 {date &&
     date.map((datum, index) => {
@@ -52,7 +51,7 @@ function WeatherDetail({lat, ion, active, setActive}) {
                         <th>night</th>
                         </tr>
                         <tr>
-                        <th>Temperature</th>
+                        <th>Temp</th>
                         <td>{Math.floor(datum.temp.day)}</td>
                         <td>{Math.floor(datum.temp.morn)}</td>
                         <td>{Math.floor(datum.temp.eve)}</td>
